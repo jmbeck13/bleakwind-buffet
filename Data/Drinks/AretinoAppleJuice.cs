@@ -4,12 +4,11 @@
  * Purpose: Class used to represent the Aretino Apple Juice drink option.
  */
 using BleakwindBuffet.Data.Enums;
-using Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Data.Drinks
+namespace BleakwindBuffet.Data.Drinks
 {
     public class AretinoAppleJuice
     {

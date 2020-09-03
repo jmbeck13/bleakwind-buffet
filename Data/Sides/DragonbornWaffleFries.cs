@@ -4,12 +4,11 @@
  * Purpose: Class used to represent the Dragonborn Waffle Fries side option.
  */
 using BleakwindBuffet.Data.Enums;
-using Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Data.Sides
+namespace BleakwindBuffet.Data.Sides
 {
     public class DragonbornWaffleFries
     {

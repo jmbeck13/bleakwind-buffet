@@ -1,9 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿/*
+ * Author: Jacob Beck
+ * Class name: SodaFlavor.cs
+ * Purpose: Class used to represent soda flavors through an enumeration
+ */
 
-namespace Data.Enums
+namespace BleakwindBuffet.Data.Enums
 {
+    /// <summary>
+    /// Provides available soda flavors 
+    /// </summary>
     public enum SodaFlavor
     {
         Blackberry,

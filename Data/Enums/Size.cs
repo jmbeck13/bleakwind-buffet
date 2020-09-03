@@ -7,7 +7,7 @@
 namespace BleakwindBuffet.Data.Enums
 {
     /// <summary>
-    /// Provides available sizes dsgd
+    /// Provides available sizes 
     /// </summary>
     public enum Size
     {
