@@ -9,6 +9,9 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// Class for representing the entree.
+    /// </summary>
     public class ThugsTBone
     {
         /// <summary>
@@ -36,6 +39,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// ToString override for the entree. 
         /// </summary>
+        /// <returns>A string describing the entree</returns>
         public override string ToString()
         {
             return "Thugs T-Bone";

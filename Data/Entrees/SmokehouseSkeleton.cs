@@ -9,8 +9,19 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// Class for representing the entree.
+    /// </summary>
     public class SmokehouseSkeleton
     {
+        /// <summary>
+        /// Private variable declaration for the entree.
+        /// </summary>
+        private bool sausageLink = true;
+        private bool egg = true;
+        private bool hashBrowns = true;
+        private bool pancake = true;
+
         /// <summary>
         /// Gets the price of the entree.
         /// </summary>
@@ -24,7 +35,6 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets/sets the sausage for the entree. 
         /// </summary>
-        private bool sausageLink = true;
         public bool SausageLink
         {
             get => sausageLink;
@@ -34,7 +44,6 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets/sets the eggs for the entree. 
         /// </summary>
-        private bool egg = true;
         public bool Egg
         {
             get => egg;
@@ -44,7 +53,6 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets/sets the hash browns for the entree. 
         /// </summary>
-        private bool hashBrowns = true;
         public bool HashBrowns
         {
             get => hashBrowns;
@@ -54,7 +62,6 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets/sets the pancakes for the entree. 
         /// </summary>
-        private bool pancake = true;
         public bool Pancake
         {
             get => pancake;
@@ -69,10 +76,10 @@ namespace BleakwindBuffet.Data.Entrees
             get
             {
                 List<string> instructions = new List<string>();
-                if (!SausageLink) instructions.Add("Hold sausage");
-                if (!Egg) instructions.Add("Hold eggs");
-                if (!HashBrowns) instructions.Add("Hold hash browns");
-                if (!Pancake) instructions.Add("Hold pancakes");
+                if (SausageLink) instructions.Add("Hold sausage");
+                if (Egg) instructions.Add("Hold eggs");
+                if (HashBrowns) instructions.Add("Hold hash browns");
+                if (Pancake) instructions.Add("Hold pancakes");
                 return instructions;
             }
         }
@@ -80,6 +87,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// ToString override for the entree. 
         /// </summary>
+        /// <returns>A string describing the entree</returns>
         public override string ToString()
         {
             return "Smokehouse Skeleton";

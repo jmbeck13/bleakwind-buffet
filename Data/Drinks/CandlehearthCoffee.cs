@@ -10,12 +10,23 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
+    /// <summary>
+    /// Class for representing the drink.
+    /// </summary>
     public class CandlehearthCoffee
     {
         /// <summary>
-        /// Gets/sets the size of the drink.
+        /// Private variable declaration for the drink.
         /// </summary>
         private Size size = Size.Small;
+        private bool ice = false;
+        private bool roomForCream = false;
+        private bool decaf = false;
+
+
+        /// <summary>
+        /// Gets/sets the size of the drink.
+        /// </summary>
         public Size Size
         {
             get
@@ -58,7 +69,6 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets/sets ice for the drink.
         /// </summary>
-        private bool ice = false;
         public bool Ice
         {
             get { return ice; }
@@ -67,7 +77,6 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets/sets cream for the drink.
         /// </summary>
-        private bool roomForCream = false;
         public bool RoomForCream
         {
             get { return roomForCream; }
@@ -77,7 +86,6 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets/sets decaf for the drink.
         /// </summary>
-        private bool decaf = false;
         public bool Decaf
         {
             get { return decaf; }
@@ -101,6 +109,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// ToString override for the drink. 
         /// </summary>
+        /// <returns>A string describing the drink</returns>
         public override string ToString()
         {
              if (Decaf) return Size + " Decaf Candlehearth Coffee";

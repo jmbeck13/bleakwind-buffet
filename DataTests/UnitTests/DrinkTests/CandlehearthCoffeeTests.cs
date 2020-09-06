@@ -131,7 +131,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         {
             CandlehearthCoffee cc = new CandlehearthCoffee();
             cc.Size = size;
-            cc.RoomForCream = decaf;
+            cc.Decaf = decaf;
             Assert.Equal(name, cc.ToString());
         }
     }

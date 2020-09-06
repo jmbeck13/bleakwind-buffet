@@ -10,12 +10,20 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
+    /// <summary>
+    /// Class for representing the drink.
+    /// </summary>
     public class MarkarthMilk
     {
         /// <summary>
-        /// Gets/sets the size of the drink.
+        /// Private variable declaration for the drink.
         /// </summary>
         private Size size = Size.Small;
+        private bool ice = false;
+
+        /// <summary>
+        /// Gets/sets the size of the drink.
+        /// </summary>
         public Size Size
         {
             get
@@ -58,7 +66,6 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets/sets ice for the drink.
         /// </summary>
-        private bool ice = false;
         public bool Ice
         {
             get { return ice; }
@@ -81,6 +88,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// ToString override for the drink. 
         /// </summary>
+        /// <returns>A string describing the drink</returns>
         public override string ToString()
         {
             return Size + " Markarth Milk";

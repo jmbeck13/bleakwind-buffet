@@ -9,8 +9,18 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
-    class PhillyPoacher
+    /// <summary>
+    /// Class for representing the entree.
+    /// </summary>
+    public class PhillyPoacher
     {
+        /// <summary>
+        /// Private variable declaration for the entree.
+        /// </summary>
+        private bool sirloin = true;
+        private bool onion = true;
+        private bool roll = true;
+
         /// <summary>
         /// Gets the price of the entree.
         /// </summary>
@@ -24,7 +34,6 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets/sets the sirloin for the entree. 
         /// </summary>
-        private bool sirloin = true;
         public bool Sirloin
         {
             get => sirloin;
@@ -34,7 +43,6 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets/sets the onion for the entree. 
         /// </summary>
-        private bool onion = true;
         public bool Onion
         {
             get => onion;
@@ -44,7 +52,6 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets/sets the roll for the entree. 
         /// </summary>
-        private bool roll = true;
         public bool Roll
         {
             get => roll;
@@ -59,9 +66,9 @@ namespace BleakwindBuffet.Data.Entrees
             get
             {
                 List<string> instructions = new List<string>();
-                if (!Sirloin) instructions.Add("Hold sirloin");
-                if (!Onion) instructions.Add("Hold onions");
-                if (!Roll) instructions.Add("Hold roll");
+                if (Sirloin) instructions.Add("Hold sirloin");
+                if (Onion) instructions.Add("Hold onions");
+                if (Roll) instructions.Add("Hold roll");
                 return instructions;
             }
 
@@ -70,6 +77,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// ToString override for the entree. 
         /// </summary>
+        /// <returns>A string describing the entree</returns>
         public override string ToString()
         {
             return "Philly Poacher";

@@ -9,8 +9,22 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// Class for representing the burger.
+    /// </summary>
     public class DoubleDraugr
     {
+        /// <summary>
+        /// Private variable declaration for the burger.
+        /// </summary>
+        private bool ketchup = true;
+        private bool mustard = true;
+        private bool pickle = true;
+        private bool cheese = true;
+        private bool tomato = true;
+        private bool lettuce = true;
+        private bool mayo = true;
+
         /// <summary>
         /// Gets the price of the burger.
         /// </summary>
@@ -29,7 +43,6 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets/sets the ketchup for the burger. 
         /// </summary>
-        private bool ketchup = true;
         public bool Ketchup
         {
             get
@@ -45,7 +58,6 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets/sets the mustard for the burger. 
         /// </summary>
-        private bool mustard = true;
         public bool Mustard
         {
             get => mustard;
@@ -55,7 +67,6 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets/sets the pickles for the burger. 
         /// </summary>
-        private bool pickle = true;
         public bool Pickle
         {
             get => pickle;
@@ -65,7 +76,6 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets/sets the cheese for the burger. 
         /// </summary>
-        private bool cheese = true;
         public bool Cheese
         {
             get => cheese;
@@ -75,7 +85,6 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets/sets the tomato for the burger. 
         /// </summary>
-        private bool tomato = true;
         public bool Tomato
         {
             get => tomato;
@@ -85,7 +94,6 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets/sets the lettuce for the burger. 
         /// </summary>
-        private bool lettuce = true;
         public bool Lettuce
         {
             get => lettuce;
@@ -95,7 +103,6 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets/sets the mayo for the burger. 
         /// </summary>
-        private bool mayo = true;
         public bool Mayo
         {
             get => mayo;
@@ -110,22 +117,22 @@ namespace BleakwindBuffet.Data.Entrees
             get
             {
                 List<string> instructions = new List<string>();
-                if (!Bun) instructions.Add("Hold bun");
-                if (!Ketchup) instructions.Add("Hold ketchup");
-                if (!Mustard) instructions.Add("Hold mustard");
-                if (!Pickle) instructions.Add("Hold pickle");
-                if (!Cheese) instructions.Add("Hold cheese");
-                if (!Tomato) instructions.Add("Hold tomato");
-                if (!Lettuce) instructions.Add("Hold lettuce");
-                if (!Mayo) instructions.Add("Hold mayo");
+                if (Bun) instructions.Add("Hold bun");
+                if (Ketchup) instructions.Add("Hold ketchup");
+                if (Mustard) instructions.Add("Hold mustard");
+                if (Pickle) instructions.Add("Hold pickle");
+                if (Cheese) instructions.Add("Hold cheese");
+                if (Tomato) instructions.Add("Hold tomato");
+                if (Lettuce) instructions.Add("Hold lettuce");
+                if (Mayo) instructions.Add("Hold mayo");
                 return instructions;
             }
-
         }
 
         /// <summary>
         /// ToString override for the entree. 
         /// </summary>
+        /// <returns>A string describing the burger</returns>
         public override string ToString()
         {
             return "Double Draugr";

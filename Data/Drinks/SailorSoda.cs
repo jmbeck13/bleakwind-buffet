@@ -10,12 +10,22 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
+    /// <summary>
+    /// Class for representing the drink.
+    /// </summary>
     public class SailorSoda
     {
+
+        /// <summary>
+        /// Private variable declaration for the drink.
+        /// </summary>
+        private Size size = Size.Small;
+        private bool ice = true;
+        private SodaFlavor flavor = SodaFlavor.Cherry;
+
         /// <summary>
         /// Gets/sets the size of the drink.
         /// </summary>
-        private Size size = Size.Small;
         public Size Size
         {
             get
@@ -58,7 +68,6 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets/sets ice for the drink.
         /// </summary>
-        private bool ice = true;
         public bool Ice
         {
             get { return ice; }
@@ -68,7 +77,6 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets the price of the drink.
         /// </summary>
-        private SodaFlavor flavor = SodaFlavor.Cherry;
         public SodaFlavor Flavor
         {
             get
@@ -97,6 +105,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// ToString override for the drink. 
         /// </summary>
+        /// <returns>A string describing the drink</returns>
         public override string ToString()
         {
             return Size + " " + Flavor + " Sailor Soda";

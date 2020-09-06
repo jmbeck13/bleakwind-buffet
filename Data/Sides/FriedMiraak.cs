@@ -10,12 +10,19 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Sides
 {
+    /// <summary>
+    /// Class for representing the side.
+    /// </summary>
     public class FriedMiraak
     {
         /// <summary>
-        /// Gets/sets the size of the side.
+        /// Private variable declaration for the burger.
         /// </summary>
         private Size size = Size.Small;
+
+        /// <summary>
+        /// Gets/sets the size of the side.
+        /// </summary>
         public Size Size
         {
             get
@@ -69,6 +76,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// ToString override for the side. 
         /// </summary>
+        /// <returns>A string describing the side</returns>
         public override string ToString()
         {
             return Size + " Fried Miraak";
