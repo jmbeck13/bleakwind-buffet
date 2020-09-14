@@ -7,12 +7,12 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BleakwindBuffet.Data.Entrees
+namespace BleakwindBuffet.Data.Entrees 
 {
     /// <summary>
     /// Class for representing the burger.
     /// </summary>
-    public class DoubleDraugr
+    public class DoubleDraugr : Entree
     {
         /// <summary>
         /// Private variable declaration for the burger.
@@ -28,12 +28,12 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets the price of the burger.
         /// </summary>
-        public double Price => 7.32;
+        public override double Price => 7.32;
 
         /// <summary>
         /// Gets the calories of the burger.
         /// </summary>
-        public uint Calories => 843;
+        public override uint Calories => 843;
 
         /// <summary>
         /// Gets/sets the bun for the burger.
@@ -112,7 +112,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets/sets the instructions for the burger. 
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

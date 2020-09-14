@@ -13,7 +13,7 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// Class for representing the drink.
     /// </summary>
-    public class CandlehearthCoffee
+    public class CandlehearthCoffee : Drink
     {
         /// <summary>
         /// Private variable declaration for the drink.
@@ -27,7 +27,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets/sets the size of the drink.
         /// </summary>
-        public Size Size
+        public override Size Size
         {
             get
             {
@@ -42,7 +42,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets the price of the drink.
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -55,7 +55,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets the calories of the drink.
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             { 
@@ -89,13 +89,17 @@ namespace BleakwindBuffet.Data.Drinks
         public bool Decaf
         {
             get { return decaf; }
-            set { decaf = value; }
+            set 
+            {
+                decaf = value;
+                
+            }
         }
 
         /// <summary>
         /// Gets the instructions for the drink. 
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
@@ -112,8 +116,8 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns>A string describing the drink</returns>
         public override string ToString()
         {
-             if (Decaf) return Size + " Decaf Candlehearth Coffee";
-             else return Size + " Candlehearth Coffee";
+            if (Decaf == true) return Size + " Decaf Candlehearth Coffee";
+            else return Size + " Candlehearth Coffee";
         }
     }
 }

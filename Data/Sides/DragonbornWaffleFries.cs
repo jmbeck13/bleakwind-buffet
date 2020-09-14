@@ -13,7 +13,7 @@ namespace BleakwindBuffet.Data.Sides
     /// <summary>
     /// Class for representing the side.
     /// </summary>
-    public class DragonbornWaffleFries
+    public class DragonbornWaffleFries : Side
     {
         /// <summary>
         /// Private variable declaration for the burger.
@@ -23,7 +23,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Gets/sets the size of the side.
         /// </summary>
-        public Size Size
+        public override Size Size
         {
             get
             {
@@ -38,7 +38,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Gets the price of the side.
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -51,7 +51,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Gets the calories of the side.
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -64,7 +64,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Gets the instructions for the side. 
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

@@ -106,9 +106,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             go.Tomato = includeTomato;
             go.Cheddar = includeCheddar;
             if (includeBroccoli) Assert.Contains("Hold broccoli", go.SpecialInstructions);
-            else if (includeMushrooms) Assert.Contains("Hold mushroom", go.SpecialInstructions);
-            else if (includeTomato) Assert.Contains("Hold tomato", go.SpecialInstructions);
-            else if (includeCheddar) Assert.Contains("Hold cheddar", go.SpecialInstructions);
+            if (includeMushrooms) Assert.Contains("Hold mushrooms", go.SpecialInstructions);
+            if (includeTomato) Assert.Contains("Hold tomato", go.SpecialInstructions);
+            if (includeCheddar) Assert.Contains("Hold cheddar", go.SpecialInstructions);
             else Assert.Empty(go.SpecialInstructions);
         }
 

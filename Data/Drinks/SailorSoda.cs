@@ -13,7 +13,7 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// Class for representing the drink.
     /// </summary>
-    public class SailorSoda
+    public class SailorSoda : Drink
     {
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets/sets the size of the drink.
         /// </summary>
-        public Size Size
+        public override Size Size
         {
             get
             {
@@ -41,7 +41,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets the price of the drink.
         /// </summary>
-        public double Price 
+        public override double Price 
         {
             get
             { 
@@ -54,7 +54,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets the calories of the drink.
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -92,7 +92,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets the instructions for the drink. 
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

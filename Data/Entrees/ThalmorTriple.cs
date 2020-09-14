@@ -12,7 +12,7 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Class for representing the burger.
     /// </summary>
-    public class ThalmorTriple
+    public class ThalmorTriple : Entree
     {
         /// <summary>
         /// Private variable declaration for the burger.
@@ -30,12 +30,12 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets the price of the burger.
         /// </summary>
-        public double Price => 8.32;
+        public override double Price => 8.32;
 
         /// <summary>
         /// Gets the calories of the burger.
         /// </summary>
-        public uint Calories => 943;
+        public override uint Calories => 943;
 
         /// <summary>
         /// Gets/sets the bun for the burger.
@@ -132,7 +132,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets/sets the instructions for the burger. 
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
@@ -149,7 +149,6 @@ namespace BleakwindBuffet.Data.Entrees
                 if (Egg) instructions.Add("Hold egg");
                 return instructions;
             }
-
         }
 
         /// <summary>

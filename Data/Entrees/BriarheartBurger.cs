@@ -12,7 +12,7 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Class for representing the burger.
     /// </summary>
-    public class BriarheartBurger
+    public class BriarheartBurger : Entree
     {
         /// <summary>
         /// Private variable declaration for the burger.
@@ -25,12 +25,12 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets the price of the burger.
         /// </summary>
-        public double Price => 6.32;
+        public override double Price => 6.32;
 
         /// <summary>
         /// Gets the calories of the burger.
         /// </summary>
-        public uint Calories => 743;
+        public override uint Calories => 743;
 
         /// <summary>
         /// Gets the calories of the burger.
@@ -82,7 +82,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets/sets the instructions for the burger. 
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

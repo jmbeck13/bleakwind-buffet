@@ -125,10 +125,10 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             bb.Cheese = includeCheese;
             bb.Pickle = includePickle;
             if (includeBun) Assert.Contains("Hold bun", bb.SpecialInstructions);
-            else if (includeKetchup) Assert.Contains("Hold ketchup", bb.SpecialInstructions);
-            else if (includeMustard) Assert.Contains("Hold mustard", bb.SpecialInstructions);
-            else if (includeCheese) Assert.Contains("Hold cheese", bb.SpecialInstructions);
-            else if (includePickle) Assert.Contains("Hold pickle", bb.SpecialInstructions);
+            if (includeKetchup) Assert.Contains("Hold ketchup", bb.SpecialInstructions);
+            if (includeMustard) Assert.Contains("Hold mustard", bb.SpecialInstructions);
+            if (includeCheese) Assert.Contains("Hold cheese", bb.SpecialInstructions);
+            if (includePickle) Assert.Contains("Hold pickle", bb.SpecialInstructions);
             else Assert.Empty(bb.SpecialInstructions);
         }
 
