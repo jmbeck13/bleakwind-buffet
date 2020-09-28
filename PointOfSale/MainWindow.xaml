@@ -9,10 +9,13 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="250"/>
         </Grid.ColumnDefinitions>
-        <Border>
+        <Border BorderBrush="Black" BorderThickness="1">
             <local:MenuSelectionScreen/>
+        </Border>
+        <Border BorderBrush="Black" Grid.Column="1" BorderThickness="1">
+            <local:OrderComponent/>
         </Border>
     </Grid>
 </Window>

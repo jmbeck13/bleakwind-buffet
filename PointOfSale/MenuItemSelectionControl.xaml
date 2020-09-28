@@ -21,7 +21,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Border  Name="containerMenuBorder" Grid.ColumnSpan="3" Grid.RowSpan="7">
+        <Border  Name="containerMenuBorder" Grid.ColumnSpan="3" Grid.RowSpan="7" BorderBrush="Black">
         </Border>
         <Button Grid.Row="1" FontWeight="Bold" FontSize="15" Click="BriarheartBurgerClick">
             Briarheart Burger
