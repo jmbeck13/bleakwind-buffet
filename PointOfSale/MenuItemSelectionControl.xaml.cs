@@ -89,7 +89,7 @@ namespace PointOfSale
         {
             var orderControl = this.FindAncestor<MenuSelectionScreen>();
 
-            orderControl.SwapScreen(new ArentinoAppleJuice());
+            orderControl.SwapScreen(new AretinoAppleJuice());
         }
 
         void MarkarthMilkClick(object sender, RoutedEventArgs e)

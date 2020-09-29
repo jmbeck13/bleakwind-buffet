@@ -17,9 +17,9 @@ namespace PointOfSale
     /// <summary>
     /// Interaction logic for ArentinoAppleJuice.xaml
     /// </summary>
-    public partial class ArentinoAppleJuice : UserControl
+    public partial class AretinoAppleJuice : UserControl
     {
-        public ArentinoAppleJuice()
+        public AretinoAppleJuice()
         {
             InitializeComponent();
         }
