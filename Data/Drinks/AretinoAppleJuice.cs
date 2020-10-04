@@ -6,6 +6,7 @@
 using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
@@ -71,7 +72,11 @@ namespace BleakwindBuffet.Data.Drinks
         public bool Ice
         {
             get { return ice; }
-            set { ice = value; }
+            set 
+            { 
+                ice = value;
+                InvokePropertyChangedEvent("Ice");
+            }
         }
 
         /// <summary>

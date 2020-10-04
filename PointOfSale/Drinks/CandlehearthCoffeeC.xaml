@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="PointOfSale.SailorSoda"
+﻿<UserControl x:Class="PointOfSale.CandlehearthCoffeeC"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -27,51 +27,32 @@
            Size
         </TextBlock>
         <ComboBox Grid.Row="1" FontSize="15">
-            <ComboBoxItem>
+            <ComboBoxItem Name="Small">
                 Small
             </ComboBoxItem>
-            <ComboBoxItem>
+            <ComboBoxItem Name="Medium">
                 Medium
             </ComboBoxItem>
-            <ComboBoxItem>
+            <ComboBoxItem Name="Large">
                 Large
             </ComboBoxItem>
         </ComboBox>
 
-        <TextBlock Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="15">
-           Flavor
-        </TextBlock>
-        <ComboBox Grid.Row="1" Grid.Column="1" FontSize="15">
-            <ComboBoxItem>
-               Blackberry
-            </ComboBoxItem>
-            <ComboBoxItem>
-                Cherry
-            </ComboBoxItem>
-            <ComboBoxItem>
-                Grapefruit
-            </ComboBoxItem>
-            <ComboBoxItem>
-                Lemon
-            </ComboBoxItem>
-            <ComboBoxItem>
-                Peach
-            </ComboBoxItem>
-            <ComboBoxItem>
-                Watermelon
-            </ComboBoxItem>
-
-        </ComboBox>
-
-        <CheckBox Grid.Row="5">
+        <CheckBox Name="Ice" Grid.Row="5" IsChecked="{Binding Path=Ice}">
             Ice
         </CheckBox>
+        <CheckBox Name="Cream" IsChecked="{Binding Path=Cream}" Grid.Row="6" >
+            Cream
+        </CheckBox>
+        <CheckBox Name="Deacf" IsChecked="{Binding Path=Decaf}" Grid.Row="7" >
+            Decaf
+        </CheckBox>
 
-        <Button Grid.Column="2" Grid.Row="8" FontSize="15" Click="SSDone_Click">
+        <Button Grid.Column="2" Grid.Row="8" FontSize="15" Click="CCDone_Click">
             Done
         </Button>
         <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15">
-            Customize Sailor Soda
+            Customize Candlehearth <LineBreak/> Coffee
         </TextBlock>
     </Grid>
 </UserControl>

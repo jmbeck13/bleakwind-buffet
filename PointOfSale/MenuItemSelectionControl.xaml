@@ -20,6 +20,7 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Border  Name="containerMenuBorder" Grid.ColumnSpan="3" Grid.RowSpan="7" BorderBrush="Black">
         </Border>
@@ -46,6 +47,9 @@
         </Button>
         <Button Grid.Row="6" FontWeight="Bold" FontSize="15" Click="ThugsTBoneClick">
             Thugs T-Bone
+        </Button>
+        <Button Grid.Row="7" FontWeight="Bold" FontSize="15" Click="PhillyPoacherClick">
+            Philly Poacher
         </Button>
 
         <Button Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontSize="15" Click="SailorSodaClick">

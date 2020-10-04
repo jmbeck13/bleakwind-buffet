@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Jacob Beck
+ * Class: MadOtarGrits.xaml.cs
+ * Purpose: Represents the xaml class file for mad otar grits
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -24,6 +29,11 @@ namespace PointOfSale
             InitializeComponent();
         }
 
+        /// <summary>
+        /// A click event that the user presses when they're done customizing their item.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MOGDone_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MenuSelectionScreen>();

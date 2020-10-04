@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Jacob Beck
+ * Class: ThugsTBoneC.xaml.cs
+ * Purpose: Represents the xaml class file for thugs tbone
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -15,16 +20,21 @@ using PointOfSale.ExtensionMethod;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for SailorSoda.xaml
+    /// Interaction logic for ThugsTBone.xaml
     /// </summary>
-    public partial class SailorSoda : UserControl
+    public partial class ThugsTBoneC : UserControl
     {
-        public SailorSoda()
+        public ThugsTBoneC()
         {
             InitializeComponent();
         }
 
-        private void SSDone_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// A click event that the user presses when they're done customizing their item.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TTDone_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MenuSelectionScreen>();
 

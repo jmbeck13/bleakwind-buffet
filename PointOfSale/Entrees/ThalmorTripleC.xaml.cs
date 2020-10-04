@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Jacob Beck
+ * Class: ThalmorTripleC.xaml.cs
+ * Purpose: Represents the xaml class file for thalmor triple
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -15,16 +20,21 @@ using PointOfSale.ExtensionMethod;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for WarriorWater.xaml
+    /// Interaction logic for ThalmorTripleC.xaml
     /// </summary>
-    public partial class WarriorWater : UserControl
+    public partial class ThalmorTripleC : UserControl
     {
-        public WarriorWater()
+        public ThalmorTripleC()
         {
             InitializeComponent();
         }
 
-        private void WWDone_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// A click event that the user presses when they're done customizing their item.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TTDone_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MenuSelectionScreen>();
 

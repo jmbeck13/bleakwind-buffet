@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Jacob Beck
+ * Class: SmokehouseSkeletonC.xaml.cs
+ * Purpose: Represents the xaml class file for smokehouse skeleton
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -15,16 +20,21 @@ using PointOfSale.ExtensionMethod;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for ThugsTBone.xaml
+    /// Interaction logic for SmokehouseSkeletonC.xaml
     /// </summary>
-    public partial class ThugsTBone : UserControl
+    public partial class SmokehouseSkeletonC : UserControl
     {
-        public ThugsTBone()
+        public SmokehouseSkeletonC()
         {
             InitializeComponent();
         }
 
-        private void TTDone_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// A click event that the user presses when they're done customizing their item.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SSDone_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MenuSelectionScreen>();
 

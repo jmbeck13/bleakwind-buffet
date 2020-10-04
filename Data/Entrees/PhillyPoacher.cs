@@ -37,7 +37,7 @@ namespace BleakwindBuffet.Data.Entrees
         public bool Sirloin
         {
             get => sirloin;
-            set => sirloin = value;
+            set { sirloin = value; InvokePropertyChangedEvent("Sirloin"); }
         }
 
         /// <summary>
@@ -46,7 +46,7 @@ namespace BleakwindBuffet.Data.Entrees
         public bool Onion
         {
             get => onion;
-            set => onion = value;
+            set { onion = value; InvokePropertyChangedEvent("Onion"); }
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace BleakwindBuffet.Data.Entrees
         public bool Roll
         {
             get => roll;
-            set => roll = value;
+            set { roll = value; InvokePropertyChangedEvent("Roll"); }
         }
 
         /// <summary>

@@ -32,49 +32,49 @@ namespace PointOfSale
         {
             var orderControl = this.FindAncestor<MenuSelectionScreen>();
 
-            orderControl.SwapScreen(new DoubleDraugr());
+            orderControl.SwapScreen(new DoubleDraugrC());
         }
 
         void BriarheartBurgerClick(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MenuSelectionScreen>();
 
-            orderControl.SwapScreen(new BriarheartBurger());
+            orderControl.SwapScreen(new BriarheartBurgerC());
         }
 
         void GardenOrcOmeletteClick(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MenuSelectionScreen>();
 
-            orderControl.SwapScreen(new GardenOrcOmelette());
+            orderControl.SwapScreen(new GardenOrcOmeletteC());
         }
 
         void PhillyPoacherClick(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MenuSelectionScreen>();
 
-            orderControl.SwapScreen(new PhillyPoacher());
+            orderControl.SwapScreen(new PhillyPoacherC());
         }
 
         void ThalmorTripleClick(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MenuSelectionScreen>();
 
-            orderControl.SwapScreen(new ThalmorTriple());
+            orderControl.SwapScreen(new ThalmorTripleC());
         }
 
         void ThugsTBoneClick(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MenuSelectionScreen>();
 
-            orderControl.SwapScreen(new ThugsTBone());
+            orderControl.SwapScreen(new ThugsTBoneC());
         }
 
         void SmokehouseSkeletonClick(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MenuSelectionScreen>();
 
-            orderControl.SwapScreen(new SmokehouseSkeleton());
+            orderControl.SwapScreen(new SmokehouseSkeletonC());
         }
 
 
@@ -82,35 +82,35 @@ namespace PointOfSale
         {
             var orderControl = this.FindAncestor<MenuSelectionScreen>();
 
-            orderControl.SwapScreen(new SailorSoda());
+            orderControl.SwapScreen(new SailorSodaC());
         }
 
         void AretinoAppleJuiceClick(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MenuSelectionScreen>();
 
-            orderControl.SwapScreen(new AretinoAppleJuice());
+            orderControl.SwapScreen(new AretinoAppleJuiceC());
         }
 
         void MarkarthMilkClick(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MenuSelectionScreen>();
 
-            orderControl.SwapScreen(new MarkarthMilk());
+            orderControl.SwapScreen(new MarkarthMilkC());
         }
 
         void CandlehearthCoffeeClick(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MenuSelectionScreen>();
 
-            orderControl.SwapScreen(new CandlehearthCoffee());
+            orderControl.SwapScreen(new CandlehearthCoffeeC());
         }
 
         void WarriorWaterClick(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MenuSelectionScreen>();
 
-            orderControl.SwapScreen(new WarriorWater());
+            orderControl.SwapScreen(new WarriorWaterC());
         }
 
 

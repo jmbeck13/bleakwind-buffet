@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="PointOfSale.WarriorWater"
+﻿<UserControl x:Class="PointOfSale.SmokehouseSkeletonC"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -18,38 +18,26 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
             <RowDefinition Height="75"/>
         </Grid.RowDefinitions>
-        <TextBlock  VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="15">
-           Size
-        </TextBlock>
-        <ComboBox Grid.Row="1" FontSize="15">
-            <ComboBoxItem>
-                Small
-            </ComboBoxItem>
-            <ComboBoxItem>
-                Medium
-            </ComboBoxItem>
-            <ComboBoxItem>
-                Large
-            </ComboBoxItem>
-        </ComboBox>
-
-        <CheckBox  Grid.Row="5" >
-            Ice
+        <CheckBox Name="SausageLinks" IsChecked="{Binding Path=SausageLink}" Grid.Row="1" FontSize="15">
+            Sausage Links
         </CheckBox>
-        <CheckBox  Grid.Row="6" >
-            Lemon
+        <CheckBox Name="Eggs" IsChecked="{Binding Path=Egg}" Grid.Row="2" FontSize="15">
+            Eggs
         </CheckBox>
-
-        <Button Grid.Column="2" Grid.Row="8" FontSize="15" Click="WWDone_Click">
+        <CheckBox Name="HashBrowns" IsChecked="{Binding Path=HashBrowns}" Grid.Row="3" FontSize="15">
+            Hash Browns
+        </CheckBox>
+        <CheckBox Name="Pancake" IsChecked="{Binding Path=Pancake}" Grid.Row="4" FontSize="15">
+            Pancake
+        </CheckBox>
+        <Button Grid.Column="2" Grid.Row="5" FontSize="15" Click="SSDone_Click">
             Done
         </Button>
         <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15">
-            Customize Warrior Water
-        </TextBlock>    
+            Customize Smokehouse <LineBreak/>
+            Skeleton
+        </TextBlock>
     </Grid>
 </UserControl>

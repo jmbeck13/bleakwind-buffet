@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Jacob Beck
+ * Class: GardenOrcSaladC.xaml.cs
+ * Purpose: Represents the xaml class file for garden orc salad
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -17,13 +22,18 @@ namespace PointOfSale
     /// <summary>
     /// Interaction logic for GardenOrcOmelette.xaml
     /// </summary>
-    public partial class GardenOrcOmelette : UserControl
+    public partial class GardenOrcOmeletteC : UserControl
     {
-        public GardenOrcOmelette()
+        public GardenOrcOmeletteC()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// A click event that the user presses when they're done customizing their item.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GOODone_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MenuSelectionScreen>();
