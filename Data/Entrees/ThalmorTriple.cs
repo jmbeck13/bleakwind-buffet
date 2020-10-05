@@ -41,7 +41,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets/sets the bun for the burger.
         /// </summary>
-        public bool Bun { get => bun; set { InvokePropertyChangedEvent("Bun");  } }
+        public bool Bun { get => bun; set { bun = value; InvokePropertyChangedEvent("Bun");  } }
 
         /// <summary>
         /// Gets/sets the ketchup for the burger. 

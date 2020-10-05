@@ -17,17 +17,17 @@ namespace BleakwindBuffet.Data.Drinks
     public abstract class Drink : IOrderItem, INotifyPropertyChanged
     {
 
-        protected Size size1 = Size.Small;
+        protected Size size = Size.Small;
 
         /// <summary>
         /// The size of the drink
         /// </summary>
         public virtual Size Size 
         {
-            get => size1;
+            get => size;
             set
             {
-                size1 = value;
+                size = value;
                 InvokePropertyChangedEvent("Size");
                 InvokePropertyChangedEvent("Price");
                 InvokePropertyChangedEvent("Calories");

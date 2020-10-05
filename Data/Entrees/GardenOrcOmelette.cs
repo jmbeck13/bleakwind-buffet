@@ -38,7 +38,7 @@ namespace BleakwindBuffet.Data.Entrees
         public bool Broccoli
         {
             get => broccoli;
-            set { broccoli = value; InvokePropertyChangedEvent("Broccli"); }
+            set { broccoli = value; InvokePropertyChangedEvent("Broccoli"); }
         }
 
         /// <summary>

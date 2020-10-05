@@ -16,16 +16,16 @@ namespace BleakwindBuffet.Data.Sides
     /// </summary>
     public abstract class Side : IOrderItem, INotifyPropertyChanged
     {
-        private Size size1 = Size.Small;
+        private Size size = Size.Small;
         /// <summary>
         /// The size of the side
         /// </summary>
         public virtual Size Size
         {
-            get => size1;
+            get => size;
             set
             {
-                size1 = value;
+                size = value;
                 InvokePropertyChangedEvent("Size");
                 InvokePropertyChangedEvent("Price");
                 InvokePropertyChangedEvent("Calories");

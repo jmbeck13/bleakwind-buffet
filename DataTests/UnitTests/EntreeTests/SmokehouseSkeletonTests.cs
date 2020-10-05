@@ -7,6 +7,7 @@ using Xunit;
 
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Entrees;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
@@ -115,8 +116,51 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldReturnCorrectToString()
         {
-            SmokehouseSkeleton ss = new SmokehouseSkeleton(); ;
+            SmokehouseSkeleton ss = new SmokehouseSkeleton(); 
             Assert.Equal("Smokehouse Skeleton", ss.ToString());
+        }
+
+        [Fact]
+        public void ChangingSausageLinksChangesSausageLinksProperty()
+        {
+            SmokehouseSkeleton ss = new SmokehouseSkeleton();
+
+            Assert.PropertyChanged(ss, "SausageLinks", () => { ss.SausageLink = true; });
+            Assert.PropertyChanged(ss, "SausageLinks", () => { ss.SausageLink = false; });
+        }
+
+        [Fact]
+        public void ChangingEggChangesEggProperty()
+        {
+            SmokehouseSkeleton ss = new SmokehouseSkeleton();
+
+            Assert.PropertyChanged(ss, "Egg", () => { ss.Egg = true; });
+            Assert.PropertyChanged(ss, "Egg", () => { ss.Egg = false; });
+        }
+
+        [Fact]
+        public void ChangingHashBrownsChangesHashBrownsProperty()
+        {
+            SmokehouseSkeleton ss = new SmokehouseSkeleton();
+
+            Assert.PropertyChanged(ss, "HashBrowns", () => { ss.HashBrowns = true; });
+            Assert.PropertyChanged(ss, "HashBrowns", () => { ss.HashBrowns = false; });
+        }
+
+        [Fact]
+        public void ChangingPancakeChangesPancakeProperty()
+        {
+            SmokehouseSkeleton ss = new SmokehouseSkeleton();
+
+            Assert.PropertyChanged(ss, "Pancake", () => { ss.Pancake = true; });
+            Assert.PropertyChanged(ss, "Pancake", () => { ss.Pancake = false; });
+        }
+
+        [Fact]
+        public void InheritsInterface()
+        {
+            SmokehouseSkeleton ss = new SmokehouseSkeleton();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(ss);
         }
     }
 }

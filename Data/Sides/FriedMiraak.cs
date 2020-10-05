@@ -31,7 +31,7 @@ namespace BleakwindBuffet.Data.Sides
             }
             set
             {
-                size = value;
+                size = value; InvokePropertyChangedEvent("Size");
             }
         }
 

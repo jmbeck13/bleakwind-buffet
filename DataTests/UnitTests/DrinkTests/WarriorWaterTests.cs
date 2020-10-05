@@ -8,6 +8,7 @@ using Xunit;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Drinks;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
@@ -119,6 +120,41 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             WarriorWater ww = new WarriorWater();
             ww.Size = size;
             Assert.Equal(name, ww.ToString());
+        }
+
+        [Fact]
+        public void ChangingIceChangesIceProperty()
+        {
+            WarriorWater ww = new WarriorWater();
+
+            Assert.PropertyChanged(ww, "Ice", () => { ww.Ice = true; });
+            Assert.PropertyChanged(ww, "Ice", () => { ww.Ice = false; });
+        }
+
+        [Fact]
+        public void ChangingLemonChangesLemonProperty()
+        {
+            WarriorWater ww = new WarriorWater();
+
+            Assert.PropertyChanged(ww, "Lemon", () => { ww.Lemon = true; });
+            Assert.PropertyChanged(ww, "Lemon", () => { ww.Lemon = false; });
+        }
+
+        [Fact]
+        public void ChangingSizeChangesSizeProperty()
+        {
+            WarriorWater ww = new WarriorWater();
+            
+            Assert.PropertyChanged(ww, "Size", () => { ww.Size = Size.Small; });
+            Assert.PropertyChanged(ww, "Size", () => { ww.Size = Size.Medium; });
+            Assert.PropertyChanged(ww, "Size", () => { ww.Size = Size.Large; });
+        }
+
+        [Fact]
+        public void InheritsInterface()
+        {
+            WarriorWater ww = new WarriorWater();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(ww);
         }
     }
 }

@@ -38,16 +38,19 @@
             </ComboBoxItem>
         </ComboBox>
 
-        <CheckBox Name="Ice" Grid.Row="5" IsChecked="{Binding Path=Ice}">
+        <CheckBox Name="IceCheckBox" Grid.Row="5" IsChecked="{Binding Path=Ice}">
             Ice
         </CheckBox>
         <CheckBox Name="Cream" IsChecked="{Binding Path=Cream}" Grid.Row="6" >
             Cream
         </CheckBox>
-        <CheckBox Name="Deacf" IsChecked="{Binding Path=Decaf}" Grid.Row="7" >
+        <CheckBox Name="DecafCheckBox" IsChecked="{Binding Path=Decaf}" Grid.Row="7" >
             Decaf
         </CheckBox>
 
+        <Button  Grid.Row="8" FontSize="15">
+            Cancel
+        </Button>
         <Button Grid.Column="2" Grid.Row="8" FontSize="15" Click="CCDone_Click">
             Done
         </Button>

@@ -8,6 +8,7 @@ using Xunit;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Drinks;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
@@ -140,6 +141,50 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             cc.Size = size;
             cc.Decaf = decaf;
             Assert.Equal(name, cc.ToString());
+        }
+
+        [Fact]
+        public void ChangingIceChangesIceProperty()
+        {
+            CandlehearthCoffee cc = new CandlehearthCoffee();
+
+            Assert.PropertyChanged(cc, "Ice", () => { cc.Ice = true; });
+            Assert.PropertyChanged(cc, "Ice", () => { cc.Ice = false; });
+        }
+
+        [Fact]
+        public void ChangingCreamChangesCreamProperty()
+        {
+            CandlehearthCoffee cc = new CandlehearthCoffee();
+
+            Assert.PropertyChanged(cc, "Cream", () => { cc.RoomForCream = true; });
+            Assert.PropertyChanged(cc, "Cream", () => { cc.RoomForCream = false; });
+        }
+
+        [Fact]
+        public void ChangingDecafChangesDecafProperty()
+        {
+            CandlehearthCoffee cc = new CandlehearthCoffee();
+
+            Assert.PropertyChanged(cc, "Decaf", () => { cc.Decaf = true; });
+            Assert.PropertyChanged(cc, "Decaf", () => { cc.Decaf = false; });
+        }
+
+        [Fact]
+        public void ChangingSizeChangesSizeProperty()
+        {
+            CandlehearthCoffee cc = new CandlehearthCoffee();
+
+            Assert.PropertyChanged(cc, "Size", () => { cc.Size = Size.Small; });
+            Assert.PropertyChanged(cc, "Size", () => { cc.Size = Size.Medium; });
+            Assert.PropertyChanged(cc, "Size", () => { cc.Size = Size.Large; });
+        }
+
+        [Fact]
+        public void InheritsInterface()
+        {
+            CandlehearthCoffee cc = new CandlehearthCoffee();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(cc);
         }
     }
 }

@@ -7,6 +7,7 @@ using Xunit;
 
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Entrees;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
@@ -137,6 +138,58 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             BriarheartBurger bb = new BriarheartBurger();
             Assert.Equal("Briarheart Burger", bb.ToString());
+        }
+
+        [Fact]
+        public void ChangingBunChangesBunProperty()
+        {
+            BriarheartBurger bb = new BriarheartBurger();
+
+            Assert.PropertyChanged(bb, "Bun", () => { bb.Bun = true; });
+            Assert.PropertyChanged(bb, "Bun", () => { bb.Bun = false; });
+        }
+
+        [Fact]
+        public void ChangingKetchupChangesKetchupProperty()
+        {
+            BriarheartBurger bb = new BriarheartBurger();
+
+            Assert.PropertyChanged(bb, "Ketchup", () => { bb.Ketchup = true; });
+            Assert.PropertyChanged(bb, "Ketchup", () => { bb.Ketchup = false; });
+        }
+
+        [Fact]
+        public void ChangingMustardChangesMustardProperty()
+        {
+            BriarheartBurger bb = new BriarheartBurger();
+
+            Assert.PropertyChanged(bb, "Mustard", () => { bb.Mustard = true; });
+            Assert.PropertyChanged(bb, "Mustard", () => { bb.Mustard = false; });
+        }
+
+        [Fact]
+        public void ChangingPickleChangesPickleProperty()
+        {
+            BriarheartBurger bb = new BriarheartBurger();
+
+            Assert.PropertyChanged(bb, "Pickle", () => { bb.Pickle = true; });
+            Assert.PropertyChanged(bb, "Pickle", () => { bb.Pickle = false; });
+        }
+
+        [Fact]
+        public void ChangingCheeseChangesCheeseProperty()
+        {
+            BriarheartBurger bb = new BriarheartBurger();
+
+            Assert.PropertyChanged(bb, "Cheese", () => { bb.Cheese = true; });
+            Assert.PropertyChanged(bb, "Cheese", () => { bb.Cheese = false; });
+        }
+
+        [Fact]
+        public void InheritsInterface()
+        {
+            BriarheartBurger bb = new BriarheartBurger();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(bb);
         }
     }
 }

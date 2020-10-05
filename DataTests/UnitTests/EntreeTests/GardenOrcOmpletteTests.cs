@@ -7,6 +7,7 @@ using Xunit;
 
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Entrees;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
@@ -117,6 +118,49 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             GardenOrcOmelette go = new GardenOrcOmelette();
             Assert.Equal("Garden Orc Omelette", go.ToString());
+        }
+
+        [Fact]
+        public void ChangingBroccoliChangesBroccoliProperty()
+        {
+            GardenOrcOmelette go = new GardenOrcOmelette();
+
+            Assert.PropertyChanged(go, "Broccoli", () => { go.Broccoli = true; });
+            Assert.PropertyChanged(go, "Broccoli", () => { go.Broccoli = false; });
+        }
+
+        [Fact]
+        public void ChangingMushroomsChangesMushroomsProperty()
+        {
+            GardenOrcOmelette go = new GardenOrcOmelette();
+
+            Assert.PropertyChanged(go, "Mushrooms", () => { go.Mushrooms = true; });
+            Assert.PropertyChanged(go, "Mushrooms", () => { go.Mushrooms = false; });
+        }
+
+        [Fact]
+        public void ChangingTomatoChangesTomatoProperty()
+        {
+            GardenOrcOmelette go = new GardenOrcOmelette();
+
+            Assert.PropertyChanged(go, "Tomato", () => { go.Tomato = true; });
+            Assert.PropertyChanged(go, "Tomato", () => { go.Tomato = false; });
+        }
+
+        [Fact]
+        public void ChangingCheddarChangesCheddarProperty()
+        {
+            GardenOrcOmelette go = new GardenOrcOmelette();
+
+            Assert.PropertyChanged(go, "Cheddar", () => { go.Cheddar = true; });
+            Assert.PropertyChanged(go, "Cheddar", () => { go.Cheddar = false; });
+        }
+
+        [Fact]
+        public void InheritsInterface()
+        {
+            GardenOrcOmelette go = new GardenOrcOmelette();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(go);
         }
     }
 }

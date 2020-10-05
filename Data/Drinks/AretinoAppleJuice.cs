@@ -35,7 +35,7 @@ namespace BleakwindBuffet.Data.Drinks
             }
             set
             {
-                size = value;
+                size = value; InvokePropertyChangedEvent("Size");
             }
         }
 

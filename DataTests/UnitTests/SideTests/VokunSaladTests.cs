@@ -8,7 +8,7 @@ using Xunit;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Sides;
-
+using System.ComponentModel;
 
 namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
@@ -78,6 +78,23 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             VokunSalad vs = new VokunSalad();
             vs.Size = size;
             Assert.Equal(name, vs.ToString());
+        }
+
+        [Fact]
+        public void InheritsInterface()
+        {
+            VokunSalad vs = new VokunSalad();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(vs);
+        }
+
+        [Fact]
+        public void ChangingSizeChangesSizeProperty()
+        {
+            VokunSalad vs = new VokunSalad();
+
+            Assert.PropertyChanged(vs, "Size", () => { vs.Size = Size.Small; });
+            Assert.PropertyChanged(vs, "Size", () => { vs.Size = Size.Medium; });
+            Assert.PropertyChanged(vs, "Size", () => { vs.Size = Size.Large; });
         }
     }
 }
