@@ -21,7 +21,7 @@
             <RowDefinition/>
             <RowDefinition Height="75"/>
         </Grid.RowDefinitions>
-        <CheckBox Name="Bun" IsChecked="{Binding Path=Bun}" Grid.Row="1" FontSize="15">
+        <CheckBox Name="Bun" IsChecked="{Binding Path = Bun}" Grid.Row="1" FontSize="15">
             Bun
         </CheckBox>
         <CheckBox Name="Ketchup" IsChecked="{Binding Path=Ketchup}" Grid.Row="2" FontSize="15">

@@ -56,7 +56,7 @@ namespace BleakwindBuffet.Data.Drinks
         public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
-        /// Method to change the property of sn item.
+        /// Method to change the property of an item.
         /// </summary>
         /// <param name="name">The name of property we're changing</param>
         protected void InvokePropertyChangedEvent(string name)
