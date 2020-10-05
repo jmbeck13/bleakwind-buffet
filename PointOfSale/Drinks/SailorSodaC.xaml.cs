@@ -18,6 +18,7 @@ using System.Windows.Shapes;
 using BleakwindBuffet.Data.Drinks;
 using PointOfSale.ExtensionMethod;
 using Size = BleakwindBuffet.Data.Enums.Size;
+using Flavor = BleakwindBuffet.Data.Enums.SodaFlavor;
 
 namespace PointOfSale
 {
@@ -63,6 +64,26 @@ namespace PointOfSale
                     if (size.Name == "Small") ss.Size = Size.Small;
                     if (size.Name == "Medium") ss.Size = Size.Small;
                     if (size.Name == "Large") ss.Size = Size.Small;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Changes the flavor based on what the user chooses.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FlavorChange(object sender, SelectionChangedEventArgs e)
+        {
+            if (DataContext is SailorSoda)
+            {
+                foreach (ComboBoxItem flavor in e.AddedItems)
+                {
+                    if (flavor.Name == "Cherry") ss.Flavor = Flavor.Cherry;
+                    if (flavor.Name == "Blackberry") ss.Flavor = Flavor.Blackberry;
+                    if (flavor.Name == "Grapefruit") ss.Flavor = Flavor.Lemon;
+                    if (flavor.Name == "Peach") ss.Flavor = Flavor.Peach;
+                    if (flavor.Name == "Watermelon") ss.Flavor = Flavor.Watermelon;
                 }
             }
         }

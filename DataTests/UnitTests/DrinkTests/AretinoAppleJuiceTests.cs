@@ -99,5 +99,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             aj.Size = size;
             Assert.Equal(name, aj.ToString());
         }
+
+        [Fact]
+        public void ChangingIceChangesIceProperty()
+        {
+            AretinoAppleJuice aj = new AretinoAppleJuice();
+
+            Assert.PropertyChanged(aj, "Ice", () => { aj.Ice = true; });
+            Assert.PropertyChanged(aj, "Ice", () => { aj.Ice = false; });
+        }
     }
 }

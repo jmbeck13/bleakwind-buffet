@@ -27,13 +27,13 @@
            Size
         </TextBlock>
         <ComboBox Grid.Row="1" FontSize="15">
-            <ComboBoxItem>
+            <ComboBoxItem Name="Small">
                 Small
             </ComboBoxItem>
-            <ComboBoxItem>
+            <ComboBoxItem Name="Medium">
                 Medium
             </ComboBoxItem>
-            <ComboBoxItem>
+            <ComboBoxItem Name="Large">
                 Large
             </ComboBoxItem>
         </ComboBox>
