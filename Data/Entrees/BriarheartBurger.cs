@@ -36,7 +36,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets the calories of the burger.
         /// </summary>
-        public bool Bun { get => bun; set { bun = value; InvokePropertyChangedEvent("Bun"); } }
+        public bool Bun { get => bun; set { bun = value; InvokePropertyChangedEvent("Bun"); InvokePropertyChangedEvent("SpecialInstructions"); } }
 
         /// <summary>
         /// Gets/sets the ketchup for the burger. 
@@ -50,6 +50,7 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 ketchup = value; InvokePropertyChangedEvent("Ketchup");
+                InvokePropertyChangedEvent("SpecialInstructions");
             }
         }
 
@@ -59,7 +60,7 @@ namespace BleakwindBuffet.Data.Entrees
         public bool Mustard
         {
             get => mustard;
-            set { mustard = value; InvokePropertyChangedEvent("Mustard"); }
+            set { mustard = value; InvokePropertyChangedEvent("Mustard"); InvokePropertyChangedEvent("SpecialInstructions"); }
         }
 
         /// <summary>
@@ -68,7 +69,7 @@ namespace BleakwindBuffet.Data.Entrees
         public bool Pickle
         {
             get => pickle;
-            set { pickle = value; InvokePropertyChangedEvent("Pickle"); }
+            set { pickle = value; InvokePropertyChangedEvent("Pickle"); InvokePropertyChangedEvent("SpecialInstructions");  }
         }
 
         /// <summary>
@@ -77,7 +78,7 @@ namespace BleakwindBuffet.Data.Entrees
         public bool Cheese
         {
             get => cheese;
-            set { cheese = value; InvokePropertyChangedEvent("Cheese"); }
+            set { cheese = value; InvokePropertyChangedEvent("Cheese"); InvokePropertyChangedEvent("SpecialInstructions"); }
         }
 
         /// <summary>
@@ -87,7 +88,7 @@ namespace BleakwindBuffet.Data.Entrees
         {
             get
             {
-                List<string> instructions = new List<string>();
+                List<string> instructions = new List<string>();   // Invoke  Property Changes for each item?
                 if (Bun) instructions.Add("Hold bun");
                 if (Ketchup) instructions.Add("Hold ketchup");
                 if (Mustard) instructions.Add("Hold mustard");

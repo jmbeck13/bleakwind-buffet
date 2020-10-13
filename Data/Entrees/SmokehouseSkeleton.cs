@@ -38,7 +38,7 @@ namespace BleakwindBuffet.Data.Entrees
         public bool SausageLink
         {
             get => sausageLink;
-            set { sausageLink = value; InvokePropertyChangedEvent("SausageLinks"); }
+            set { sausageLink = value; InvokePropertyChangedEvent("SausageLinks"); InvokePropertyChangedEvent("SpecialInstructions"); }
         }
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace BleakwindBuffet.Data.Entrees
         public bool Egg
         {
             get => egg;
-            set { egg = value; InvokePropertyChangedEvent("Egg"); }
+            set { egg = value; InvokePropertyChangedEvent("Egg"); InvokePropertyChangedEvent("SpecialInstructions"); }
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace BleakwindBuffet.Data.Entrees
         public bool HashBrowns
         {
             get => hashBrowns;
-            set { hashBrowns = value; InvokePropertyChangedEvent("HashBrowns"); }
+            set { hashBrowns = value; InvokePropertyChangedEvent("HashBrowns"); InvokePropertyChangedEvent("SpecialInstructions"); }
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace BleakwindBuffet.Data.Entrees
         public bool Pancake
         {
             get => pancake;
-            set { pancake = value; InvokePropertyChangedEvent("Pancake"); }
+            set { pancake = value; InvokePropertyChangedEvent("Pancake"); InvokePropertyChangedEvent("SpecialInstructions"); }
         }
 
         /// <summary>

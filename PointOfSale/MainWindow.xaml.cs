@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BleakwindBuffet.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,8 @@ namespace PointOfSale
         public MainWindow()
         {
             InitializeComponent();
+            Order order = new Order();
+            this.DataContext = order;
         }
-
     }
 }

@@ -1,7 +1,7 @@
 ﻿/*
  * Author: Jacob Beck
- * Class: MadOtarGrits.xaml.cs
- * Purpose: Represents the xaml class file for mad otar grits
+ * Class: VokunSaladC.xaml.cs
+ * Purpose: Represents the xaml class file for vokun salad
  */
 using System;
 using System.Collections.Generic;
@@ -20,11 +20,11 @@ using PointOfSale.ExtensionMethod;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for MadOtarGrits.xaml
+    /// Interaction logic for VokunSaladC.xaml
     /// </summary>
-    public partial class MadOtarGrits : UserControl
+    public partial class VokunSaladC : UserControl
     {
-        public MadOtarGrits()
+        public VokunSaladC()
         {
             InitializeComponent();
         }
@@ -34,7 +34,7 @@ namespace PointOfSale
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void MOGDone_Click(object sender, RoutedEventArgs e)
+        private void VSDone_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MenuSelectionScreen>();
 

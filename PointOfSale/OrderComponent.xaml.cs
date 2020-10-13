@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BleakwindBuffet.Data;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -21,6 +22,19 @@ namespace PointOfSale
         public OrderComponent()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// REmoves the items from the orderComponent list
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void RemoveItem_Click(object sender, RoutedEventArgs args)
+        {
+            if(DataContext is Order order && sender is Button button && button.DataContext is IOrderItem item)
+            {
+                order.Remove(item);
+            }
         }
     }
 }

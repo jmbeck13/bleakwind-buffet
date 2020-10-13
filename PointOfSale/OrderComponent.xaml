@@ -10,10 +10,9 @@
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -21,14 +20,40 @@
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
-                </Grid.RowDefinitions>
-                <TextBlock HorizontalAlignment="Center" FontSize="15" >
-                   Order Number
-                </TextBlock>
-            <Button Grid.Row="6" FontWeight="Bold" FontSize="15">
-                   Complete Order
-                </Button>
-
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock HorizontalAlignment="Center" FontSize="15" >
+                Order #
+            </TextBlock>
+            <ListView Grid.Row="1"  Name="itemsInOrder" ItemsSource="{Binding Path=Items}" IsSynchronizedWithCurrentItem="True" Grid.RowSpan="7">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Name="itemPrice">
+                                <Run Text="{Binding Mode=OneWay}"/>
+                                <Run Text=" $"/>
+                                <Run Text="{Binding Path=Price, Mode=OneWay}"/>
+                            </TextBlock>
+                            <ListView Name="instructions" ItemsSource="{Binding Path=SpecialInstructions}"/>
+                            <Button Name="RFOButton" Click="RemoveItem_Click">
+                                Remove for Order
+                            </Button>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>                
+            </ListView>
+            <TextBlock Name="Subtotal" Grid.Row="8">
+                Subtotal:
+            </TextBlock>
+            <TextBlock Name="Tax" Grid.Row="8" VerticalAlignment="Center">
+                Tax:
+            </TextBlock>
+            <TextBlock Name="Total" Grid.Row="8" VerticalAlignment="Bottom">
+                Total:
+            </TextBlock>
+            <TextBlock Text="{Binding Path=Subtotal, StringFormat=c}" Name="SubtotalXamal" Grid.Row="8" HorizontalAlignment="Right"/>
+            <TextBlock Text="{Binding Path=Tax, StringFormat=c}" Name="TaxXamal" Grid.Row="8" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <TextBlock Text="{Binding Path=Total, StringFormat=c}" Name="TotalXamal" Grid.Row="8" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
         </Grid>
     </Border>
 </UserControl>

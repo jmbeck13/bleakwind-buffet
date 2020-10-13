@@ -1,7 +1,7 @@
 ﻿/*
  * Author: Jacob Beck
- * Class: DragonbornWaffleFries.xaml.cs
- * Purpose: Represents the xaml class file for dragonborn waffle fries
+ * Class: MadOtarGritsC.xaml.cs
+ * Purpose: Represents the xaml class file for mad otar grits
  */
 using System;
 using System.Collections.Generic;
@@ -20,11 +20,11 @@ using PointOfSale.ExtensionMethod;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for DragonbornWaffleFries.xaml
+    /// Interaction logic for MadOtarGrits.xaml
     /// </summary>
-    public partial class DragonbornWaffleFries : UserControl
+    public partial class MadOtarGritsC : UserControl
     {
-        public DragonbornWaffleFries()
+        public MadOtarGritsC()
         {
             InitializeComponent();
         }
@@ -34,7 +34,7 @@ namespace PointOfSale
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void DWFDone_Click(object sender, RoutedEventArgs e)
+        private void MOGDone_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MenuSelectionScreen>();
 

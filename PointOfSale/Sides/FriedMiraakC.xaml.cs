@@ -1,7 +1,7 @@
 ﻿/*
  * Author: Jacob Beck
- * Class: VokunSalad.xaml.cs
- * Purpose: Represents the xaml class file for vokun salad
+ * Class: FriedMiraakC.xaml.cs
+ * Purpose: Represents the xaml class file for fried miraak
  */
 using System;
 using System.Collections.Generic;
@@ -20,11 +20,11 @@ using PointOfSale.ExtensionMethod;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for VokunSalad.xaml
+    /// Interaction logic for FriedMiraak.xaml
     /// </summary>
-    public partial class VokunSalad : UserControl
+    public partial class FriedMiraakC : UserControl
     {
-        public VokunSalad()
+        public FriedMiraakC()
         {
             InitializeComponent();
         }
@@ -34,7 +34,7 @@ namespace PointOfSale
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void VSDone_Click(object sender, RoutedEventArgs e)
+        private void FMDone_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MenuSelectionScreen>();
 
