@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BleakwindBuffet.Data.Sides;
 using PointOfSale.ExtensionMethod;
 
 namespace PointOfSale
@@ -39,6 +40,24 @@ namespace PointOfSale
             var orderControl = this.FindAncestor<MenuSelectionScreen>();
 
             orderControl.SwapScreen(new MenuSelectionScreen());
+        }
+
+        /// <summary>
+        /// Changes the size based on what the user chooses.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SizeChange(object sender, SelectionChangedEventArgs e)
+        {
+            if (DataContext is VokunSalad vs)
+            {
+                foreach (ComboBoxItem size in e.AddedItems)
+                {
+                    if (size.Name == "Small") vs.Size = BleakwindBuffet.Data.Enums.Size.Small;
+                    if (size.Name == "Medium") vs.Size = BleakwindBuffet.Data.Enums.Size.Medium;
+                    if (size.Name == "Large") vs.Size = BleakwindBuffet.Data.Enums.Size.Large;
+                }
+            }
         }
     }
 }

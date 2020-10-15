@@ -15,6 +15,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BleakwindBuffet.Data.Enums;
+using BleakwindBuffet.Data.Sides;
 using PointOfSale.ExtensionMethod;
 
 namespace PointOfSale
@@ -39,6 +41,24 @@ namespace PointOfSale
             var orderControl = this.FindAncestor<MenuSelectionScreen>();
 
             orderControl.SwapScreen(new MenuSelectionScreen());
+        }
+
+        /// <summary>
+        /// Changes the size based on what the user chooses.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SizeChange(object sender, SelectionChangedEventArgs e)
+        {
+            if (DataContext is DragonbornWaffleFries dwf)
+            {
+                foreach (ComboBoxItem size in e.AddedItems)
+                {
+                    if (size.Name == "Small") dwf.Size = BleakwindBuffet.Data.Enums.Size.Small;
+                    if (size.Name == "Medium") dwf.Size = BleakwindBuffet.Data.Enums.Size.Medium;
+                    if (size.Name == "Large") dwf.Size = BleakwindBuffet.Data.Enums.Size.Large;
+                }
+            }
         }
     }
 }

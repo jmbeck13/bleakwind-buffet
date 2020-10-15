@@ -36,5 +36,10 @@ namespace PointOfSale
                 order.Remove(item);
             }
         }
+
+        private void CompleteOrder_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new Order();
+        }
     }
 }

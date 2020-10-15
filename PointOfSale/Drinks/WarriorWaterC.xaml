@@ -26,7 +26,7 @@
         <TextBlock  VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="15">
            Size
         </TextBlock>
-        <ComboBox Grid.Row="1" FontSize="15">
+        <ComboBox Grid.Row="1" SelectionChanged="SizeChange" FontSize="15">
             <ComboBoxItem Name ="Small">
                 Small
             </ComboBoxItem>

@@ -22,17 +22,22 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <TextBlock HorizontalAlignment="Center" FontSize="15" >
-                Order #
-            </TextBlock>
-            <ListView Grid.Row="1"  Name="itemsInOrder" ItemsSource="{Binding Path=Items}" IsSynchronizedWithCurrentItem="True" Grid.RowSpan="7">
+            <TextBlock Text="Order Number"  HorizontalAlignment="Center" FontSize="15" />
+            <TextBlock Text="{Binding Path=Number}"   FontSize="15" Margin="178,0,21,0" />
+            <Button Name="CancelOrder" Grid.Row="7" Margin="0,26,0,0" VerticalAlignment="Top" Height="27" Grid.RowSpan="2" BorderThickness="1">
+                Cancel Order
+            </Button>
+            <Button Name="NewOrder" Grid.Row="7"  Click="CompleteOrder_Click"  VerticalAlignment="Top" Height="26"  BorderThickness="1">
+                Complete Order
+            </Button>
+            <ListView Grid.Row="1"  Name="itemsInOrder" ItemsSource="{Binding Path=Items}" IsSynchronizedWithCurrentItem="True" Grid.RowSpan="6">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
                             <TextBlock Name="itemPrice">
                                 <Run Text="{Binding Mode=OneWay}"/>
                                 <Run Text=" $"/>
-                                <Run Text="{Binding Path=Price, Mode=OneWay}"/>
+                                <Run Text="{Binding Path=Price, Mode=OneTime}"/>
                             </TextBlock>
                             <ListView Name="instructions" ItemsSource="{Binding Path=SpecialInstructions}"/>
                             <Button Name="RFOButton" Click="RemoveItem_Click">
@@ -40,7 +45,7 @@
                             </Button>
                         </StackPanel>
                     </DataTemplate>
-                </ListView.ItemTemplate>                
+                </ListView.ItemTemplate>
             </ListView>
             <TextBlock Name="Subtotal" Grid.Row="8">
                 Subtotal:

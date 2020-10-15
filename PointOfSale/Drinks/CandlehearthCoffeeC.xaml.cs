@@ -58,13 +58,13 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void SizeChange(object sender, SelectionChangedEventArgs e)
         {
-            if (DataContext is CandlehearthCoffee)
+            if (DataContext is CandlehearthCoffee cc)
             {
                 foreach (ComboBoxItem size in e.AddedItems)
                 {
                     if (size.Name == "Small") cc.Size = Size.Small;
-                    if (size.Name == "Medium") cc.Size = Size.Small;
-                    if (size.Name == "Large") cc.Size = Size.Small;
+                    if (size.Name == "Medium") cc.Size = Size.Medium;
+                    if (size.Name == "Large") cc.Size = Size.Large;
                 }
             }
         }

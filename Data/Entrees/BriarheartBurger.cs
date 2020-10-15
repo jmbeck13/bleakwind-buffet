@@ -88,7 +88,7 @@ namespace BleakwindBuffet.Data.Entrees
         {
             get
             {
-                List<string> instructions = new List<string>();   // Invoke  Property Changes for each item?
+                List<string> instructions = new List<string>();  
                 if (Bun) instructions.Add("Hold bun");
                 if (Ketchup) instructions.Add("Hold ketchup");
                 if (Mustard) instructions.Add("Hold mustard");

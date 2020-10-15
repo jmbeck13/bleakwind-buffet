@@ -18,7 +18,7 @@ namespace BleakwindBuffet.Data
     /// </summary>
     public class Order : ICollection, INotifyCollectionChanged, INotifyPropertyChanged
     {
-        public ICollection<IOrderItem> order; 
+        public ICollection<IOrderItem> order;
         public event PropertyChangedEventHandler PropertyChanged;
         public event NotifyCollectionChangedEventHandler CollectionChanged;
 
@@ -50,7 +50,7 @@ namespace BleakwindBuffet.Data
         /// <summary>
         /// The private backing variable for the number of the order
         /// </summary>
-        private static int nextOrderNumber = 1;
+        private static int nextOrderNumber = 0;
 
         /// <summary>
         /// The number of the order
@@ -76,7 +76,6 @@ namespace BleakwindBuffet.Data
             InvokePropertyChangedEvent("Tax");
             InvokePropertyChangedEvent("Total");
             InvokePropertyChangedEvent("Calories");
-
 
         }
 

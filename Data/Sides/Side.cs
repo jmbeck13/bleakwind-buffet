@@ -29,7 +29,7 @@ namespace BleakwindBuffet.Data.Sides
                 InvokePropertyChangedEvent("Size");
                 InvokePropertyChangedEvent("Price");
                 InvokePropertyChangedEvent("Calories");
-                InvokePropertyChangedEvent("SpecialInstructions");
+                InvokePropertyChangedEvent("Name");
             }
         }
 
@@ -38,6 +38,14 @@ namespace BleakwindBuffet.Data.Sides
         /// </summary>
         /// <value>In US dollars</value>
         public abstract double Price { get; }
+
+        /// <summary>
+        /// A public property to get the name of the current side item.
+        /// </summary>
+        public string Name
+        {
+            get => this.ToString();
+        }
 
         /// <summary>
         /// The calories of the side

@@ -65,7 +65,7 @@ namespace BleakwindBuffet.Data.Drinks
         public bool Ice
         {
             get { return ice; }
-            set { ice = value; InvokePropertyChangedEvent("Ice"); }
+            set { ice = value; InvokePropertyChangedEvent("Ice"); InvokePropertyChangedEvent("SpecialInstructions"); }
         }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace BleakwindBuffet.Data.Drinks
         public bool Lemon
         {
             get { return lemon; }
-            set { lemon = value; InvokePropertyChangedEvent("Lemon"); }
+            set { lemon = value; InvokePropertyChangedEvent("Lemon"); InvokePropertyChangedEvent("SpecialInstructions"); }
         }
 
         /// <summary>

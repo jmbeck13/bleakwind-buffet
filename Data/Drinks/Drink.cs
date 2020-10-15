@@ -31,7 +31,16 @@ namespace BleakwindBuffet.Data.Drinks
                 InvokePropertyChangedEvent("Size");
                 InvokePropertyChangedEvent("Price");
                 InvokePropertyChangedEvent("Calories");
+                InvokePropertyChangedEvent("Name");
             }
+        }
+
+        /// <summary>
+        /// A public property to get the name of the current drink item.
+        /// </summary>
+        public string Name
+        {
+            get => this.ToString();
         }
 
         /// <summary>

@@ -57,13 +57,13 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void SizeChange(object sender, SelectionChangedEventArgs e)
         {
-            if (DataContext is SailorSoda)
+            if (DataContext is SailorSoda ss)
             {
                 foreach (ComboBoxItem size in e.AddedItems)
                 {
                     if (size.Name == "Small") ss.Size = Size.Small;
-                    if (size.Name == "Medium") ss.Size = Size.Small;
-                    if (size.Name == "Large") ss.Size = Size.Small;
+                    if (size.Name == "Medium") ss.Size = Size.Medium;
+                    if (size.Name == "Large") ss.Size = Size.Large;
                 }
             }
         }
@@ -75,13 +75,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void FlavorChange(object sender, SelectionChangedEventArgs e)
         {
-            if (DataContext is SailorSoda)
+            if (DataContext is SailorSoda ss)
             {
                 foreach (ComboBoxItem flavor in e.AddedItems)
                 {
                     if (flavor.Name == "Cherry") ss.Flavor = Flavor.Cherry;
                     if (flavor.Name == "Blackberry") ss.Flavor = Flavor.Blackberry;
-                    if (flavor.Name == "Grapefruit") ss.Flavor = Flavor.Lemon;
+                    if (flavor.Name == "Grapefruit") ss.Flavor = Flavor.Grapefruit;
+                    if (flavor.Name == "Lemon") ss.Flavor = Flavor.Lemon;
                     if (flavor.Name == "Peach") ss.Flavor = Flavor.Peach;
                     if (flavor.Name == "Watermelon") ss.Flavor = Flavor.Watermelon;
                 }

@@ -35,7 +35,7 @@ namespace BleakwindBuffet.Data.Drinks
             }
             set
             {
-                size = value; InvokePropertyChangedEvent("Size");
+                size = value; InvokePropertyChangedEvent("Size"); 
             }
         }
 
@@ -72,7 +72,7 @@ namespace BleakwindBuffet.Data.Drinks
         public bool Ice
         {
             get { return ice; }
-            set { ice = value; InvokePropertyChangedEvent("Ice"); }
+            set { ice = value; InvokePropertyChangedEvent("Ice"); InvokePropertyChangedEvent("SpecialInstructions"); }
         }
         /// <summary>
         /// Gets/sets cream for the drink.
@@ -80,7 +80,7 @@ namespace BleakwindBuffet.Data.Drinks
         public bool RoomForCream
         {
             get { return roomForCream; }
-            set { roomForCream = value; InvokePropertyChangedEvent("Cream"); }
+            set { roomForCream = value; InvokePropertyChangedEvent("Cream"); InvokePropertyChangedEvent("SpecialInstructions"); }
         }
 
         /// <summary>
@@ -91,8 +91,9 @@ namespace BleakwindBuffet.Data.Drinks
             get { return decaf; }
             set 
             {
-                decaf = value; InvokePropertyChangedEvent("Decaf");
-
+                decaf = value; 
+                InvokePropertyChangedEvent("Decaf");
+                InvokePropertyChangedEvent("SpecialInstructions");
             }
         }
 
@@ -118,12 +119,10 @@ namespace BleakwindBuffet.Data.Drinks
         {
             if (Decaf == true)
             {
-                InvokePropertyChangedEvent("ToSting");
                 return Size + " Decaf Candlehearth Coffee";
             }
             else
             {
-                InvokePropertyChangedEvent("ToSting");
                 return Size + " Candlehearth Coffee";
             }
         }

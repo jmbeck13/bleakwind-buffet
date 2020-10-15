@@ -26,7 +26,7 @@
         <TextBlock  VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="15">
            Size
         </TextBlock>
-        <ComboBox Grid.Row="1" FontSize="15">
+        <ComboBox Grid.Row="1" SelectionChanged="SizeChange" FontSize="15">
             <ComboBoxItem Name="Small">
                 Small
             </ComboBoxItem>
@@ -41,7 +41,7 @@
         <CheckBox Name="IceCheckBox" Grid.Row="5" IsChecked="{Binding Path=Ice}">
             Ice
         </CheckBox>
-        <CheckBox Name="Cream" IsChecked="{Binding Path=Cream}" Grid.Row="6" >
+        <CheckBox Name="Cream" IsChecked="{Binding Path=RoomForCream}" Grid.Row="6" >
             Cream
         </CheckBox>
         <CheckBox Name="DecafCheckBox" IsChecked="{Binding Path=Decaf}" Grid.Row="7" >

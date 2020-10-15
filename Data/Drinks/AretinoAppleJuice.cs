@@ -32,10 +32,10 @@ namespace BleakwindBuffet.Data.Drinks
             get
             {
                 return size;
-            }
+            } 
             set
             {
-                size = value; InvokePropertyChangedEvent("Size");
+                size = value; InvokePropertyChangedEvent("Size"); InvokePropertyChangedEvent("Name");
             }
         }
 
@@ -76,6 +76,7 @@ namespace BleakwindBuffet.Data.Drinks
             { 
                 ice = value;
                 InvokePropertyChangedEvent("Ice");
+                InvokePropertyChangedEvent("SpecialInstructions");
             }
         }
 

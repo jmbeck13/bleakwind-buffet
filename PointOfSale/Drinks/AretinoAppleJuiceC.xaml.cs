@@ -52,13 +52,13 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void SizeChange(object sender, SelectionChangedEventArgs e)
         {
-            if(DataContext is AretinoAppleJuice)
+            if(DataContext is AretinoAppleJuice aj)
             {
                 foreach(ComboBoxItem size in e.AddedItems)
                 {
                     if (size.Name == "Small") aj.Size = Size.Small;
-                    if (size.Name == "Medium") aj.Size = Size.Small;
-                    if (size.Name == "Large") aj.Size = Size.Small;
+                    if (size.Name == "Medium") aj.Size = Size.Medium;
+                    if (size.Name == "Large") aj.Size = Size.Large;
                 }
             }
         }

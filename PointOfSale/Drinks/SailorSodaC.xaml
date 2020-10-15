@@ -26,7 +26,7 @@
         <TextBlock  VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="15">
            Size
         </TextBlock>
-        <ComboBox Grid.Row="1" FontSize="15">
+        <ComboBox Grid.Row="1" SelectionChanged="SizeChange"   FontSize="15">
             <ComboBoxItem Name="Small">
                 Small
             </ComboBoxItem>
@@ -41,7 +41,7 @@
         <TextBlock Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="15">
            Flavor
         </TextBlock>
-        <ComboBox Grid.Row="1" Grid.Column="1" FontSize="15">
+        <ComboBox Grid.Row="1" Grid.Column="1" SelectionChanged="FlavorChange" FontSize="15">
             <ComboBoxItem Name="Blackberry">
                Blackberry
             </ComboBoxItem>

@@ -54,13 +54,13 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void SizeChange(object sender, SelectionChangedEventArgs e)
         {
-            if (DataContext is MarkarthMilk)
+            if (DataContext is MarkarthMilk mm)
             {
                 foreach (ComboBoxItem size in e.AddedItems)
                 {
                     if (size.Name == "Small") mm.Size = Size.Small;
-                    if (size.Name == "Medium") mm.Size = Size.Small;
-                    if (size.Name == "Large") mm.Size = Size.Small;
+                    if (size.Name == "Medium") mm.Size = Size.Medium;
+                    if (size.Name == "Large") mm.Size = Size.Large;
                 }
             }
         }

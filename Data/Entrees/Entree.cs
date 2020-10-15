@@ -28,6 +28,14 @@ namespace BleakwindBuffet.Data.Entrees
         public abstract uint Calories { get; }
 
         /// <summary>
+        /// A public property to get the name of the current Entree item.
+        /// </summary>
+        public string Name
+        {
+            get => this.ToString();
+        }
+
+        /// <summary>
         /// The special instructions to prepare the entree
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
