@@ -1,0 +1,181 @@
+﻿<UserControl x:Class="PointOfSale.CashPaymentControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PointOfSale"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="8">
+           Total Sale:
+        </TextBlock>
+        <TextBlock FontSize="10" Text="{Binding Path=Total}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="8"/>
+        <TextBlock FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Grid.Row="8">
+           Amount Due:
+        </TextBlock>
+
+        <TextBlock FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="6" Grid.Row="8">
+          Change Owed:
+        </TextBlock>
+
+        <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Width="63">
+            From <LineBreak/> Customer
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1">
+            $100
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2">
+            $50
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3">
+            $20
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4">
+            $10
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5">
+            $5
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="6">
+            $2
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="7">
+            $1
+        </TextBlock>
+
+        <TextBlock Grid.Column="7" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="63">
+            From <LineBreak/> Customer
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="5" Grid.Row="2">
+            $1
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="5" Grid.Row="3">
+            50c
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="5" Grid.Row="4">
+            25c
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="5" Grid.Row="5">
+            10c
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="5" Grid.Row="6">
+            5c
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="5" Grid.Row="7">
+            1c
+        </TextBlock>
+
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="1" Grid.Row="1" Height="50">
+            +
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="1" Grid.Row="2" Height="50">
+            +
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="1" Grid.Row="3" Height="50">
+            +
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="1" Grid.Row="4" Height="50">
+            +
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="1" Grid.Row="5" Height="50">
+            +
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="1" Grid.Row="6" Height="50">
+            +
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="1" Grid.Row="7" Height="50">
+            +
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="3" Grid.Row="1" Height="50">
+            -
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="3" Grid.Row="2" Height="50">
+            -
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="3" Grid.Row="3" Height="50">
+            -
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="3" Grid.Row="4" Height="50">
+            -
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="3" Grid.Row="5" Height="50">
+            -
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="3" Grid.Row="6" Height="50">
+            -
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="3" Grid.Row="7" Height="50">
+            -
+        </Button>
+
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="6" Grid.Row="2" Height="50">
+            +
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="6" Grid.Row="3" Height="50">
+            +
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="6" Grid.Row="4" Height="50">
+            +
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="6" Grid.Row="5" Height="50">
+            +
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="6" Grid.Row="6" Height="50">
+            +
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="6" Grid.Row="7" Height="50">
+            +
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="8" Grid.Row="6" Height="50">
+            -
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="8" Grid.Row="7" Height="50">
+            -
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="8" Grid.Row="2" Height="50">
+            -
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="8" Grid.Row="3" Height="50">
+            -
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="8" Grid.Row="4" Height="50">
+            -
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="30" Grid.Column="8" Grid.Row="5" Height="50">
+            -
+        </Button>
+
+        <Button Click="ReturnToOrder_Click" VerticalAlignment="Center" FontSize="13" Grid.Column="9" Height="50" Grid.ColumnSpan="2">
+            Return to order
+        </Button>
+        <Button VerticalAlignment="Center" FontSize="13" Grid.Column="9" Grid.Row="8" Height="50" Grid.ColumnSpan="2">
+            Finalize Sale
+        </Button>
+    </Grid>
+</UserControl>

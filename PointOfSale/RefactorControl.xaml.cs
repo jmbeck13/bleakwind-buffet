@@ -1,14 +1,7 @@
-﻿/*
- * Author: Jacob Beck
- * Class name: MainWindow.xaml.cs
- * Purpose: Class used to represent the full GUI screen.
- */
-using BleakwindBuffet.Data;
+﻿using BleakwindBuffet.Data;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -22,16 +15,26 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for RefactorControl.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class RefactorControl : UserControl
     {
-        public MainWindow()
+        public RefactorControl()
         {
             InitializeComponent();
             Order order = new Order();
             this.DataContext = order;
         }
 
+
+        public void UpdateDataContext()
+        {
+            DataContext = new Order();
+        }
+
+        public void SwapScreen(FrameworkElement framework)
+        {
+            containerMenuSelectionBorder.Child = framework;
+        }
     }
 }

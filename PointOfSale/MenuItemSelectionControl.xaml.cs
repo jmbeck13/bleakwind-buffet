@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Jacob Beck
+ * Class name: MenuItemSelectionControl.xaml.cs
+ * Purpose: Class used to represent the customers menu order.
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -23,14 +28,34 @@ namespace PointOfSale
     /// </summary>
     public partial class MenuItemSelectionControl : UserControl
     {
-       
         
         public MenuItemSelectionControl() 
         {
             InitializeComponent();
         }
 
-        
+
+
+        void AddCombo_Click(object sender, RoutedEventArgs e)
+        {
+            Entree entree = new BriarheartBurger();
+            Side side = new DragonbornWaffleFries();
+            Drink drink = new WarriorWater();
+
+            Combo combo = new Combo(entree, side, drink);
+
+            if(DataContext is Order item)
+            {
+                item.Add(combo);
+            }
+
+            var orderControl = this.FindAncestor<MenuSelectionScreen>();
+
+            var x = new BriarheartBurgerC();
+            x.DataContext = bb;
+            orderControl.SwapScreen(x);
+        }
+
         void DoubleDraugrClick(object sender, RoutedEventArgs e)
         {
             DoubleDraugr dd = new DoubleDraugr();

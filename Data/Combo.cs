@@ -21,6 +21,14 @@ namespace BleakwindBuffet.Data
     public class Combo : IOrderItem, INotifyPropertyChanged
     {
 
+
+        public Combo(Entree o, Side s, Drink d)
+        {
+            this.Entree = entree;
+            this.Side = s;
+            this.Drink = d;
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
@@ -143,20 +151,11 @@ namespace BleakwindBuffet.Data
             get
             {
                 List<string> si = new List<string>();
-                if (Entree != null)
-                {
-                    si.Add(Entree.ToString() + Environment.NewLine);
-                    si.Add(Entree.SpecialInstructions.ToString() + Environment.NewLine); 
-                }
-                if (Drink != null)
-                {
-                    si.Add(Drink.ToString() + Environment.NewLine);
-                    si.Add(Drink.SpecialInstructions.ToString() + Environment.NewLine);
-                }
-                if (Side != null)
-                {
-                    si.Add(Side.SpecialInstructions.ToString());
-                }
+                si.Add(Entree.ToString());
+                si.Add(Entree.SpecialInstructions.ToString());
+                si.Add(Drink.ToString());
+                si.Add(Drink.SpecialInstructions.ToString());
+                si.Add(Side.SpecialInstructions.ToString());
                 return si;
             }
         }

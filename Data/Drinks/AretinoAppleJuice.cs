@@ -24,6 +24,7 @@ namespace BleakwindBuffet.Data.Drinks
         private bool ice = false;
 
 
+
         /// <summary>
         /// Gets/sets the size of the drink.
         /// </summary>

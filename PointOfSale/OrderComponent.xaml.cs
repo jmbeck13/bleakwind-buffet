@@ -1,4 +1,5 @@
 ﻿using BleakwindBuffet.Data;
+using PointOfSale.ExtensionMethod;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -25,7 +26,7 @@ namespace PointOfSale
         }
 
         /// <summary>
-        /// REmoves the items from the orderComponent list
+        /// Removes the items from the orderComponent list
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
@@ -37,9 +38,26 @@ namespace PointOfSale
             }
         }
 
+        /// <summary>
+        /// Cancels the current order and creates and new one.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CancelOrder_Click(object sender, RoutedEventArgs e)
+        {
+            var payment = this.FindAncestor<RefactorControl>();
+            payment.UpdateDataContext();
+        }
+
+        /// <summary>
+        /// Completes teh order and brings up the payment screen.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CompleteOrder_Click(object sender, RoutedEventArgs e)
         {
-            DataContext = new Order();
+            var payment = this.FindAncestor<RefactorControl>();
+            payment.SwapScreen(new PaymentOptionsScreen());         
         }
     }
 }

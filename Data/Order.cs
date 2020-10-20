@@ -31,6 +31,7 @@ namespace BleakwindBuffet.Data
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
+
         /// <summary>
         /// Turns order into an array
         /// </summary>
@@ -50,7 +51,7 @@ namespace BleakwindBuffet.Data
         /// <summary>
         /// The private backing variable for the number of the order
         /// </summary>
-        private static int nextOrderNumber = 0;
+        private static int nextOrderNumber = -1;
 
         /// <summary>
         /// The number of the order
@@ -76,7 +77,6 @@ namespace BleakwindBuffet.Data
             InvokePropertyChangedEvent("Tax");
             InvokePropertyChangedEvent("Total");
             InvokePropertyChangedEvent("Calories");
-
         }
 
         /// <summary>
@@ -117,9 +117,8 @@ namespace BleakwindBuffet.Data
             return order.GetEnumerator();
         }
 
-        private double salesTaxRate = 0.12;
 
-        
+        private double salesTaxRate = 0.12;
         /// <summary>
         /// The sales tax rate on the order
         /// </summary>

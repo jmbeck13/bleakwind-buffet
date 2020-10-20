@@ -1,4 +1,9 @@
-﻿using BleakwindBuffet.Data;
+﻿/*
+ * Author: Jacob Beck
+ * Class name: MenuSelectionScreen.xaml.cs
+ * Purpose: Class used to represent the customers menu order.
+ */
+using BleakwindBuffet.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;

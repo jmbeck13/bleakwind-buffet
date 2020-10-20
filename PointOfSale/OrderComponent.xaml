@@ -24,10 +24,10 @@
             </Grid.RowDefinitions>
             <TextBlock Text="Order Number"  HorizontalAlignment="Center" FontSize="15" />
             <TextBlock Text="{Binding Path=Number}"   FontSize="15" Margin="178,0,21,0" />
-            <Button Name="CancelOrder" Grid.Row="7" Margin="0,26,0,0" VerticalAlignment="Top" Height="27" Grid.RowSpan="2" BorderThickness="1">
+            <Button Name="CancelOrder" Click="CancelOrder_Click" Grid.Row="7" Margin="0,26,0,0" VerticalAlignment="Top" Height="27" Grid.RowSpan="2" BorderThickness="1">
                 Cancel Order
             </Button>
-            <Button Name="NewOrder" Grid.Row="7"  Click="CompleteOrder_Click"  VerticalAlignment="Top" Height="26"  BorderThickness="1">
+            <Button Click="CompleteOrder_Click" Name="NewOrder" Grid.Row="7" VerticalAlignment="Top" Height="26"  BorderThickness="1">
                 Complete Order
             </Button>
             <ListView Grid.Row="1"  Name="itemsInOrder" ItemsSource="{Binding Path=Items}" IsSynchronizedWithCurrentItem="True" Grid.RowSpan="6">

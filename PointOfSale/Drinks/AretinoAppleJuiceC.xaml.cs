@@ -5,6 +5,8 @@
  */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Reflection;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -44,7 +46,6 @@ namespace PointOfSale
             orderControl.SwapScreen(new MenuSelectionScreen());
         }
 
-
         /// <summary>
         /// Changes the size based on what the user chooses.
         /// </summary>
@@ -57,10 +58,11 @@ namespace PointOfSale
                 foreach(ComboBoxItem size in e.AddedItems)
                 {
                     if (size.Name == "Small") aj.Size = Size.Small;
-                    if (size.Name == "Medium") aj.Size = Size.Medium;
-                    if (size.Name == "Large") aj.Size = Size.Large;
+                    if (size.Name == "Medium") aj.Size = Size.Medium; 
+                    if (size.Name == "Large") aj.Size = Size.Large; 
                 }
             }
+            
         }
     }
 }
