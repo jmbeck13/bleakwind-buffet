@@ -35,7 +35,7 @@
         <TextBlock FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="8">
            Total Sale:
         </TextBlock>
-        <TextBlock FontSize="10" Text="{Binding Path=Total}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="8"/>
+        <TextBlock FontSize="10" Text="{Binding Path=Total, StringFormat=c}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="8"/>
         <TextBlock TextWrapping="Wrap" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Grid.Row="8">
            Amount Due:
         </TextBlock>

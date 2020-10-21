@@ -276,7 +276,6 @@ namespace BleakwindBuffet.Data
                 givenDollars = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("GivenDollars"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CurrentPayment"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SufficientPayment"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
                 MakeChange();
             }
@@ -294,7 +293,6 @@ namespace BleakwindBuffet.Data
                 givenTwos = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("GivenTwos"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CurrentPayment"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SufficientPayment"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
                 MakeChange();
             }
@@ -313,7 +311,6 @@ namespace BleakwindBuffet.Data
                 givenFives = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("GivenFives"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CurrentPayment"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SufficientPayment"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
                 MakeChange();
             }
@@ -331,7 +328,6 @@ namespace BleakwindBuffet.Data
                 givenTens = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("GivenTens"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CurrentPayment"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SufficientPayment"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
                 MakeChange();
             }
@@ -350,7 +346,6 @@ namespace BleakwindBuffet.Data
                 givenTwenties = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("GivenTwenties"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CurrentPayment"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SufficientPayment"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
                 MakeChange();
             }
@@ -369,7 +364,6 @@ namespace BleakwindBuffet.Data
                 givenFifties = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("GivenFifties"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CurrentPayment"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SufficientPayment"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
                 MakeChange();
             }
@@ -388,7 +382,6 @@ namespace BleakwindBuffet.Data
                 givenHundreds = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("GivenHundreds"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CurrentPayment"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SufficientPayment"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
                 MakeChange();
             }
@@ -408,7 +401,6 @@ namespace BleakwindBuffet.Data
                 givenPennies = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("GivenPennies"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CurrentPayment"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SufficientPayment"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
                 MakeChange();
             }
@@ -426,7 +418,6 @@ namespace BleakwindBuffet.Data
                 givenNickels = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("GivenNickels"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CurrentPayment"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SufficientPayment"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
                 MakeChange();
             }
@@ -444,7 +435,6 @@ namespace BleakwindBuffet.Data
                 givenDimes = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("GivenDimes"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CurrentPayment"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SufficientPayment"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
                 MakeChange();
             }
@@ -462,7 +452,6 @@ namespace BleakwindBuffet.Data
                 givenQuarters = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("GivenQuarters"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CurrentPayment"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SufficientPayment"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
                 MakeChange();
             }
@@ -480,7 +469,6 @@ namespace BleakwindBuffet.Data
                 givenHalfDollars = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("GivenHalfDollars"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CurrentPayment"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SufficientPayment"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
                 MakeChange();
             }
@@ -498,7 +486,6 @@ namespace BleakwindBuffet.Data
                 givenChangeDollars = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("GivenChangeDollars"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CurrentPayment"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SufficientPayment"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
                 MakeChange();
             }
