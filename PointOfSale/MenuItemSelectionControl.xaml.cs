@@ -49,11 +49,9 @@ namespace PointOfSale
                 item.Add(combo);
             }
 
-            var orderControl = this.FindAncestor<MenuSelectionScreen>();
+            var orderControl = this.FindAncestor<RefactorControl>(); // Messed up
 
-            var x = new BriarheartBurgerC();
-            x.DataContext = bb;
-            orderControl.SwapScreen(x);
+            orderControl.SwapScreen(new ComboSelection());
         }
 
         void DoubleDraugrClick(object sender, RoutedEventArgs e)
