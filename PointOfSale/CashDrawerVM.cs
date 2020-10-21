@@ -21,6 +21,7 @@ namespace BleakwindBuffet.Data
             get => Math.Round(order.Subtotal,2);
         }
 
+        
         public double Total
         {
             get => Math.Round(order.Total,2);
@@ -46,6 +47,11 @@ namespace BleakwindBuffet.Data
                 }
                 else amountDue = Total;
 
+                if(amountDue < CurrentChangeDue)
+                {
+                    amountDue = 0;
+                }
+
                 return amountDue;
             }
         }
@@ -69,7 +75,7 @@ namespace BleakwindBuffet.Data
             get
             {
                 currentPayment = GivenDollars * 1.00 + GivenTwos * 2.00 + GivenFives * 5.00 + GivenTens * 10.00 + GivenTwenties * 20.0 + GivenFifties * 50.0 + GivenHundreds * 100.0 
-                    + GivenPennies * 0.01 + GivenNickels * 0.05 + GivenDimes * 0.10 + GivenQuarters * 0.25 + GivenHalfDollars * 0.50 + GivenChangeDollars * 1.00;
+                                 + GivenPennies * 0.01 + GivenNickels * 0.05 + GivenDimes * 0.10 + GivenQuarters * 0.25 + GivenHalfDollars * 0.50 + GivenChangeDollars * 1.00;
                 return currentPayment;
             }
         }
@@ -83,30 +89,30 @@ namespace BleakwindBuffet.Data
             {
                 currentChangeDue = Math.Round(CurrentPayment - Total, 2);
 
-                int payment = (int)currentChangeDue;
-                double paymentChange = Math.Round(currentChangeDue - payment, 2);
+                int money = (int)currentChangeDue;
+                double paymentChange = Math.Round(currentChangeDue - money, 2);
 
-                ReturnHundreds = payment / 100;
-                payment %= 100;
+                ReturnHundreds = money / 100;
+                money %= 100;
 
-                ReturnFifties = payment / 50;
-                payment %= 50;
+                ReturnFifties = money / 50;
+                money %= 50;
 
-                ReturnTwenties = payment / 20;
-                payment %= 20;
+                ReturnTwenties = money / 20;
+                money %= 20;
 
-                ReturnTens = payment / 10;
-                payment %= 10;
+                ReturnTens = money / 10;
+                money %= 10;
 
-                ReturnFives = payment / 5;
-                payment %= 5;
+                ReturnFives = money / 5;
+                money %= 5;
 
-                ReturnTwos = payment / 2;
-                payment %= 2;
+                ReturnTwos = money / 2;
+                money %= 2;
 
-                ReturnDollars = payment;
+                ReturnDollars = money;
 
-                //ReturnCoinDollars = 0;
+                ReturnCoinDollars = 0;
 
                 ReturnHalfDollars = (int)(paymentChange / 0.50);
                 paymentChange %= 0.50;
@@ -686,7 +692,7 @@ namespace BleakwindBuffet.Data
         /// </summary>
         public int ReturnCoinDollars
         {
-            get => ReturnCoinDollars;
+            get => returnCoinDollars;
             set
             {
                 returnCoinDollars = value;
@@ -695,11 +701,18 @@ namespace BleakwindBuffet.Data
             }
         }
 
+        /// <summary>
+        /// Opens the CashDrawer
+        /// </summary>
+        public void OpenDrawer()
+        {
+            CashDrawer.OpenDrawer();
+        }
        
 
 
         /// <summary>
-        /// Finalizes the sale and payments
+        /// Completes the order total
         /// </summary>
         public void FinializeSale()
         {

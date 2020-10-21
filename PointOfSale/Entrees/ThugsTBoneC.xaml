@@ -25,7 +25,7 @@
         
         
         <Button Grid.Column="2" Grid.Row="4" Click="TTDone_Click">
-            Cancel
+            Done
         </Button>
     </Grid>
 </UserControl>

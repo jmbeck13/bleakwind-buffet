@@ -93,7 +93,7 @@ namespace PointOfSale
             RecieptPrinter.PrintLine("Tax:....$" + order.Tax.ToString());
             RecieptPrinter.PrintLine("Total:....$" + order.Total.ToString());
             RecieptPrinter.PrintLine("Payment method used: " + paymentType);
-            RecieptPrinter.PrintLine("Change Owed:....$"); // Variable to keep track of change 
+            RecieptPrinter.PrintLine("Change Owed:....$0.00"); 
             RecieptPrinter.CutTape();
         }
 
@@ -104,7 +104,6 @@ namespace PointOfSale
         /// <param name="e"></param>
         public void CashPayment_Click(object sender, RoutedEventArgs e)
         {
-            paymentType = "Cash";
             var payment = this.FindAncestor<RefactorControl>();
             Order o = (Order)DataContext;
             payment.SwapScreen(new CashPaymentControl(o));

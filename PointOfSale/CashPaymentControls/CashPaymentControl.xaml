@@ -47,13 +47,17 @@
         <TextBlock Text="{Binding Path=CurrentChangeDue, StringFormat=c}" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="7" Grid.Row="8"/>
 
 
-        <TextBlock FontSize="10" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Width="53" Height="30">
-            From Customer
+        <TextBlock FontSize="9" TextWrapping="Wrap"  Grid.Column="2" Width="72" Height="30">
+            From <LineBreak/> Customer
         </TextBlock>
-
-
-        <TextBlock FontSize="10" TextWrapping="Wrap" Grid.Column="8" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="52" Height="30">
-            From Customer
+        <TextBlock FontSize="10" TextWrapping="Wrap" Grid.Column="4" Width="73" Height="30">
+            Change
+        </TextBlock>
+        <TextBlock FontSize="10" TextWrapping="Wrap"  Grid.Row="1" Grid.Column="11" Width="53" Height="30">
+            Change
+        </TextBlock>
+        <TextBlock FontSize="9" TextWrapping="Wrap" Grid.Column="8" Grid.Row="1"  Width="52" Height="30">
+            From <LineBreak/> Customer
         </TextBlock>
 
         <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="44">
@@ -99,24 +103,24 @@
 
 
         <local:CashPaymentButton ChangeQuantity="{Binding Path=ReturnHundreds}"  CustomerQuantity="{Binding Path=GivenHundreds}" x:Name="Hundreds" Grid.ColumnSpan="6" Margin="0,49,72,1" Grid.RowSpan="2"/>
-        <local:CashPaymentButton x:Name="Fifty" Grid.ColumnSpan="6" Margin="0,49,72,1" Grid.RowSpan="2" Grid.Row="1"/>
-        <local:CashPaymentButton x:Name="Twenty" Grid.ColumnSpan="6" Margin="0,49,72,1" Grid.RowSpan="2" Grid.Row="2"/>
-        <local:CashPaymentButton x:Name="Tens" Grid.ColumnSpan="6" Margin="0,49,72,1" Grid.RowSpan="2" Grid.Row="3"/>
-        <local:CashPaymentButton x:Name="Fives" Grid.ColumnSpan="6" Margin="0,49,72,1" Grid.RowSpan="2" Grid.Row="4"/>
-        <local:CashPaymentButton x:Name="Twos" Grid.ColumnSpan="6" Margin="0,49,72,1" Grid.RowSpan="2" Grid.Row="5"/>
-        <local:CashPaymentButton x:Name="Ones" Grid.ColumnSpan="6" Margin="0,49,72,1" Grid.RowSpan="2" Grid.Row="6"/>
+        <local:CashPaymentButton ChangeQuantity="{Binding Path=ReturnFifities}" CustomerQuantity="{Binding Path=GivenFifties}" x:Name="Fifty" Grid.ColumnSpan="6" Margin="0,49,72,1" Grid.RowSpan="2" Grid.Row="1"/>
+        <local:CashPaymentButton ChangeQuantity="{Binding Path=ReturnTwenties}" CustomerQuantity="{Binding Path=GivenTwenties}" x:Name="Twenty" Grid.ColumnSpan="6" Margin="0,49,72,1" Grid.RowSpan="2" Grid.Row="2"/>
+        <local:CashPaymentButton ChangeQuantity="{Binding Path=ReturnTens}" CustomerQuantity="{Binding Path=GivenTens}" x:Name="Tens" Grid.ColumnSpan="6" Margin="0,49,72,1" Grid.RowSpan="2" Grid.Row="3"/>
+        <local:CashPaymentButton ChangeQuantity="{Binding Path=ReturnFives}" CustomerQuantity="{Binding Path=GivenFives}" x:Name="Fives" Grid.ColumnSpan="6" Margin="0,49,72,1" Grid.RowSpan="2" Grid.Row="4"/>
+        <local:CashPaymentButton ChangeQuantity="{Binding Path=ReturnTwos}" CustomerQuantity="{Binding Path=GivenTwos}" x:Name="Twos" Grid.ColumnSpan="6" Margin="0,49,72,1" Grid.RowSpan="2" Grid.Row="5"/>
+        <local:CashPaymentButton ChangeQuantity="{Binding Path=ReturnDollar}" CustomerQuantity="{Binding Path=GivenDollar}" x:Name="Ones" Grid.ColumnSpan="6" Margin="0,49,72,1" Grid.RowSpan="2" Grid.Row="6"/>
 
-        <local:CashPaymentButton x:Name="OnesChange" Grid.ColumnSpan="6" Margin="72,0,0,0" Grid.Row="2" Grid.Column="5"/>
-        <local:CashPaymentButton x:Name="HalfDollar" Grid.ColumnSpan="6" Margin="72,49,0,1" Grid.RowSpan="2" Grid.Row="2" Grid.Column="5"/>
-        <local:CashPaymentButton x:Name="Quarter" Grid.ColumnSpan="6" Margin="72,0,0,0" Grid.Row="4" Grid.Column="5"/>
-        <local:CashPaymentButton x:Name="Dime" Grid.ColumnSpan="6" Margin="72,0,0,1" Grid.Row="5" Grid.Column="5"/>
-        <local:CashPaymentButton x:Name="Nickel" Grid.ColumnSpan="6" Margin="72,0,0,1" Grid.Row="6" Grid.Column="5"/>
-        <local:CashPaymentButton x:Name="Pennies" Grid.ColumnSpan="6" Margin="72,0,0,1" Grid.Row="7" Grid.Column="5"/>
+        <local:CashPaymentButton ChangeQuantity="{Binding Path=ReturnHalfDollars}" CustomerQuantity="{Binding Path=GivenHalfDollars}" x:Name="HalfDollar" Grid.ColumnSpan="6" Margin="72,49,0,1" Grid.RowSpan="2" Grid.Row="2" Grid.Column="5"/>
+        <local:CashPaymentButton ChangeQuantity="{Binding Path=ReturnCoinDollars}" CustomerQuantity="{Binding Path=GivenChangeDollars}" x:Name="OnesChange" Grid.ColumnSpan="6" Margin="72,0,0,0" Grid.Row="2" Grid.Column="5"/>
+        <local:CashPaymentButton ChangeQuantity="{Binding Path=ReturnQuarters}" CustomerQuantity="{Binding Path=GivenQuarters}" x:Name="Quarter" Grid.ColumnSpan="6" Margin="72,0,0,0" Grid.Row="4" Grid.Column="5"/>
+        <local:CashPaymentButton ChangeQuantity="{Binding Path=ReturnDimes}" CustomerQuantity="{Binding Path=GivenDimes}" x:Name="Dime" Grid.ColumnSpan="6" Margin="72,0,0,1" Grid.Row="5" Grid.Column="5"/>
+        <local:CashPaymentButton ChangeQuantity="{Binding Path=ReturnNickels}" CustomerQuantity="{Binding Path=GivenNickels}" x:Name="Nickel" Grid.ColumnSpan="6" Margin="72,0,0,1" Grid.Row="6" Grid.Column="5"/>
+        <local:CashPaymentButton ChangeQuantity="{Binding Path=ReturnPennies}" CustomerQuantity="{Binding Path=GivenPennies}" x:Name="Pennies" Grid.ColumnSpan="6" Margin="72,0,0,1" Grid.Row="7" Grid.Column="5"/>
 
         <Button Click="ReturnToOrder_Click" VerticalAlignment="Center" FontSize="13" Grid.Column="9" Height="50" Grid.ColumnSpan="2">
             Return to order
         </Button>
-        <Button VerticalAlignment="Center" FontSize="13" Grid.Column="9" Grid.Row="8" Height="50" Grid.ColumnSpan="2">
+        <Button Click="FinalizeSale_Click" VerticalAlignment="Center" FontSize="13" Grid.Column="9" Grid.Row="8" Height="50" Grid.ColumnSpan="2">
             Finalize Sale
         </Button>
     </Grid>

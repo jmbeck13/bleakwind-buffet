@@ -47,10 +47,7 @@
         <CheckBox Name="DecafCheckBox" IsChecked="{Binding Path=Decaf}" Grid.Row="7" >
             Decaf
         </CheckBox>
-
-        <Button  Grid.Row="8" FontSize="15">
-            Cancel
-        </Button>
+        
         <Button Grid.Column="2" Grid.Row="8" FontSize="15" Click="CCDone_Click">
             Done
         </Button>
