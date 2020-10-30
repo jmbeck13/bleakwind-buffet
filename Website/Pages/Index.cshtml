@@ -1,0 +1,64 @@
+﻿@page
+@using BleakwindBuffet.Data.Entrees;
+@using BleakwindBuffet.Data.Drinks;
+@using BleakwindBuffet.Data.Sides;
+@using BleakwindBuffet.Data.Enums;
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to the Bleakwind Buffet Website!</h1>
+</div>
+
+<p>
+    We at Bleakwind Buffet are proud to bring you authentic fantasy meals straight from the world of Skyrim.
+    Shake the blood off your sword and sake your thirst with one of our old-fashioned sailor sodas.
+    Hack into a Smokehouse Skeleton with your dagger. Or vanquish the the mighty Thalmor Triple Burger!
+    You’ve had a hard adventure and earned your loot, so spend it with us!.
+</p>
+
+
+
+<h2 class="text-center">Entrees</h2>
+<div>
+    @foreach (Entree entree in BleakwindBuffet.Data.Menu.Entrees())
+    {
+        <h4>
+            @entree.Name
+        </h4>
+        <p>
+            Price: $@entree.Price Calories: @entree.Calories
+        </p>
+    }
+</div>
+
+
+<h2 class="text-center">Drinks</h2>
+<div>
+    @foreach (Drink drink in BleakwindBuffet.Data.Menu.Drinks())
+    {
+        <h4>
+            @drink.Name
+        </h4>
+        <p>
+            Price: $@drink.Price Calories: @drink.Calories
+        </p>
+    }
+</div>
+
+<h2 class="text-center">Sides</h2>
+<div>
+    @foreach (Side side in BleakwindBuffet.Data.Menu.Sides())
+    {
+        <h4>
+            @side.Name
+        </h4>
+        <p>
+            Price: $@side.Price Calories: @side.Calories
+        </p>
+    }
+</div>
+
+<h7 class="text-center"> Any entree, side, and drink can be combined into a Combo with a $1 discount!</h7>

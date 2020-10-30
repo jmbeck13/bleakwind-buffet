@@ -61,9 +61,9 @@ namespace PointOfSale
             {
                 foreach (ComboBoxItem size in e.AddedItems)
                 {
-                    if (size.Name == "Small") ss.Size = Size.Small;
-                    if (size.Name == "Medium") ss.Size = Size.Medium;
-                    if (size.Name == "Large") ss.Size = Size.Large;
+                    if (size.Name == "Small"  && Box.SelectedItem == Small) ss.Size = Size.Small;
+                    if (size.Name == "Medium" && Box.SelectedItem == Medium) ss.Size = Size.Medium;
+                    if (size.Name == "Large" && Box.SelectedItem == Large) ss.Size = Size.Large;
                 }
             }
         }
