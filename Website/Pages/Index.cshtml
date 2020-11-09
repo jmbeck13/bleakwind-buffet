@@ -3,105 +3,112 @@
 @using BleakwindBuffet.Data.Drinks;
 @using BleakwindBuffet.Data.Sides;
 @using BleakwindBuffet.Data.Enums;
+@using BleakwindBuffet.Data;
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
 
-<form id="Menu">
-    <div id="search">
-        <input type="text" name="SearchTerms" value="@Model.SearchTerms" />
-        <input type="submit" value="Search">
-    </div>
+    <form id="Menu">
+        <div class="text-center" id="filters" >
+            <div id="search">
+                <input type="text" name="SearchTerms" value="@Model.SearchTerms" />
+                <input type="submit" value="Search">
+            </div>
 
-    <div id="filters">
 
-        <h4>Category</h4>
-        @foreach (String category in BleakwindBuffet.Data.Menu.OrderItem)
-        {
-            <label>
-                <input type="checkbox" name="OrderItem" value="@category" checked="@Model.OrderItem.Contains(category)" />
-                @category
-            </label>
-        }
 
-        <h4>Calories</h4>
-        <div>
-            <input name="MINCal" type="number" min="0" max="1000" step="1" placeholder="min" />
-            to
-            <input name="MAXCal" type="number" min="0" max="1000" step="1" placeholder="max" />
+            <h4>Category</h4>
+            @foreach (String category in BleakwindBuffet.Data.Menu.ItemTypes)
+            {
+                <label>
+                    <input type="checkbox" name="ItemTypes" value="@category" checked="@Model.ItemTypes.Contains(category)" />
+                    @category
+                </label>
+            }
+
+            <h4>Calories</h4>
+            <div>
+                <input name="MINCal" value="@Model.MINCal" type="number" min="0" max="1000" step="1" placeholder="min" />
+                to
+                <input name="MAXCal" value="@Model.MAXCal" type="number" min="0" max="1000" step="1" placeholder="max" />
+            </div>
+
+            <h4>Price</h4>
+            <div>
+                <input name="MINPrice" value="@Model.MINPrice" type="number" min="0.00" max="10.00" step=".01" placeholder="min" />
+                to
+                <input name="MAXPrice" value="@Model.MAXPrice" type="number" min="0.00" max="10.00" step=".01" placeholder="max" />
+            </div>
+
+        
+
+            <div class="text-center">
+                <h1 class="display-4">Welcome to the Bleakwind Buffet Website!</h1>
+            </div>
+
+            <p>
+                We at Bleakwind Buffet are proud to bring you authentic fantasy meals straight from the world of Skyrim.
+                Shake the blood off your sword and sake your thirst with one of our old-fashioned sailor sodas.
+                Hack into a Smokehouse Skeleton with your dagger. Or vanquish the the mighty Thalmor Triple Burger!
+                You’ve had a hard adventure and earned your loot, so spend it with us!
+            </p>
+
+
+
+
+            <div>
+                <h2>Entrees</h2>
+
+                @foreach (IOrderItem entree in Model.Entrees)
+                {
+                    @if (entree is BleakwindBuffet.Data.Entrees.Entree)
+                    {
+                        <div>
+                            <h4>@entree.ToString()</h4>
+                            <p>Price: $@entree.Price</p>
+                            <p>Calories: @entree.Calories</p>
+                        </div>
+                    }
+                }
+            </div>
+
+
+
+            <div>
+                <h2>Drinks</h2>
+
+                @foreach (IOrderItem drink in Model.Drinks)
+                {
+                    @if (drink is BleakwindBuffet.Data.Drinks.Drink)
+                    {
+                        <div>
+                            <h4>@drink.ToString()</h4>
+                            <p>Price: $@drink.Price</p>
+                            <p>Calories: @drink.Calories </p>
+                        </div>
+                    }
+                }
+            </div>
+
+
+
+            <div>
+                <h2>Sides</h2>
+
+                @foreach (IOrderItem side in Model.Sides)
+                {
+                    @if (side is BleakwindBuffet.Data.Sides.Side)
+                    {
+                        <div>
+                            <h4>@side.ToString()</h4>
+                            <p>Price: $@side.Price</p>
+                            <p>Calories: @side.Calories</p>
+                        </div>
+                    }
+                }
+            </div>
+
+            <h7 class="text-center"> Any entree, side, and drink can be combined into a Combo with a $1 discount!</h7>
         </div>
-
-        <h4>Price</h4>
-        <div>
-            <input name="MINPrice" type="number" min="0.00" max="10.00" step=".01" placeholder="min" />
-            to
-            <input name="MAXPrice" type="number" min="0.00" max="10.00" step=".01" placeholder="max" />
-        </div>
-
-    </div>
-</form>
-
-<div class="text-center">
-
-    <div class="text-center">
-        <h1 class="display-4">Welcome to the Bleakwind Buffet Website!</h1>
-    </div>
-
-    <p>
-        We at Bleakwind Buffet are proud to bring you authentic fantasy meals straight from the world of Skyrim.
-        Shake the blood off your sword and sake your thirst with one of our old-fashioned sailor sodas.
-        Hack into a Smokehouse Skeleton with your dagger. Or vanquish the the mighty Thalmor Triple Burger!
-        You’ve had a hard adventure and earned your loot, so spend it with us!
-    </p>
-
-
-
-    
-    <div>
-        <h2 class="text-center">Entrees</h2>
-
-        @foreach (Entree entree in BleakwindBuffet.Data.Menu.Entrees())
-        {
-            <h4>
-                @entree.Name
-            </h4>
-            <p>
-                Price: $@entree.Price Calories: @entree.Calories
-            </p>
-        }
-    </div>
-
-
-    
-    <div>
-        <h2 class="text-center">Drinks</h2>
-
-        @foreach (Drink drink in BleakwindBuffet.Data.Menu.Drinks())
-        {
-            <h4>
-                @drink.Name
-            </h4>
-            <p>
-                Price: $@drink.Price Calories: @drink.Calories
-            </p>
-        }
-    </div>
-
-    
-    <div>
-        <h2 class="text-center">Sides</h2>
-
-        @foreach (Side side in BleakwindBuffet.Data.Menu.Sides())
-        {
-            <h4>
-                @side.Name
-            </h4>
-            <p>
-                Price: $@side.Price Calories: @side.Calories
-            </p>
-        }
-    </div>
-
-    <h7 class="text-center"> Any entree, side, and drink can be combined into a Combo with a $1 discount!</h7>
-</div>
+    </form>

@@ -16,6 +16,8 @@ namespace BleakwindBuffet.Data.Sides
     /// </summary>
     public abstract class Side : IOrderItem, INotifyPropertyChanged
     {
+        public virtual string Type => "Side";
+
         private Size size = Size.Small;
         /// <summary>
         /// The size of the side

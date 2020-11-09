@@ -138,26 +138,34 @@ namespace BleakwindBuffet.Data
             return menu;
         }
 
-        public static string[] OrderItem
+        /// <summary>
+        /// Potential types of items.
+        /// </summary>
+        public static string[] ItemTypes
         {
-            get => new string[] { "Entree", "Side", "Drink",};
+            get => new string[] { "Entree", "Side", "Drink"};
         }
+
+        /// <summary>
+        /// Gets all the items that are on the menu.
+        /// </summary>
+        public static IEnumerable<IOrderItem> ReturnFullMenu { get { return FullMenu(); } }
 
         /// <summary>
         /// An IEnumerable<IOrderItem> that returns what the user searches for.
         /// </summary>
         /// <param name="items">Menu items</param>
         /// <param name="search">What the user entered</param>
-        /// <returns></returns>
+        /// <returns>List that comes back with the items that fit the search criteria</returns>
         public static IEnumerable<IOrderItem> Search(IEnumerable<IOrderItem> items, string search)
         {
             List<IOrderItem> menu = new List<IOrderItem>();
 
-            if (search == null || items == null) return items;
+            if (search == null ) return ReturnFullMenu;
 
-            foreach(IOrderItem i in items)
+            foreach(IOrderItem i in ReturnFullMenu)
             {
-                if(i.ToString().Contains(search) && i.ToString() != null)
+                if(i.ToString().ToLower().Contains(search.ToLower()))
                 {
                     menu.Add(i);
                 }
@@ -171,22 +179,16 @@ namespace BleakwindBuffet.Data
         /// </summary>
         /// <param name="items">Menu items</param>
         /// <param name="search">What the user entered</param>
-        /// <returns></returns>
+        /// <returns>List with the filtered menu items</returns>
         public static IEnumerable<IOrderItem> FilterByOrderItem(IEnumerable<IOrderItem> items, IEnumerable<string> search)
         {
-            List<IOrderItem> menu = new List<IOrderItem>();
-
             if (search == null || search.Count() == 0) return items;
 
-            foreach(IOrderItem i in items)
+            List<IOrderItem> menu = new List<IOrderItem>();
+
+            foreach (IOrderItem i in items)
             {
-                if (search.Contains("Entree") && i is Entree) menu.Add(i);
-
-                else if (search.Contains("Drink") && i is Drink) menu.Add(i);
-
-                else if (search.Contains("Side") && i is Side) menu.Add(i);
-
-                else return menu;
+                if (search.Contains(i.Type) && i.Type != null) menu.Add(i);
             }
 
             return menu;
@@ -198,16 +200,16 @@ namespace BleakwindBuffet.Data
         /// <param name="items">Menu items</param>
         /// <param name="min">Min calories</param>
         /// /// <param name="max">Max calories</param>
-        /// <returns></returns>
+        /// <returns>List that fits the filtered calories</returns>
         public static IEnumerable<IOrderItem> FilterByCalories(IEnumerable<IOrderItem> items, int? min, int? max)
         {
-            List<IOrderItem> menu = new List<IOrderItem>();
-
             // null values return all
-            if (min == null && max == 0) return items;
+            if (min == null && max == null) return items;
+
+            var menu = new List<IOrderItem>();
 
             // only min value entered
-            if(max == null)
+            if (max == null)
             {
                 foreach (IOrderItem i in items)
                 {
@@ -244,13 +246,14 @@ namespace BleakwindBuffet.Data
         /// <param name="items">Menu items</param>
         /// <param name="min">Min calories</param>
         /// /// <param name="max">Max calories</param>
-        /// <returns></returns>
+        /// <returns>List that fits in the filtered price range</returns>
         public static IEnumerable<IOrderItem> FilterByPrice(IEnumerable<IOrderItem> items, double? min, double? max)
         {
-            List<IOrderItem> menu = new List<IOrderItem>();
-
             // null values return all
-            if (min == null && max == 0) return items;
+            if (min == null && max == null) return items;
+
+           var menu = new List<IOrderItem>();
+
 
             // only min value entered
             if (max == null)

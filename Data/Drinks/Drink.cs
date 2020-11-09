@@ -17,6 +17,8 @@ namespace BleakwindBuffet.Data.Drinks
     public abstract class Drink : IOrderItem, INotifyPropertyChanged
     {
 
+        public virtual string Type => "Drink";
+
         protected Size size = Size.Small;
 
         /// <summary>

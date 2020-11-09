@@ -16,6 +16,9 @@ namespace BleakwindBuffet.Data.Entrees
     /// </summary>
     public abstract class Entree : IOrderItem, INotifyPropertyChanged
     {
+
+        public virtual string Type => "Entree";
+
         /// <summary>
         /// The price of the entree
         /// </summary>
