@@ -11,12 +11,10 @@
 
     <form id="Menu">
         <div class="text-center" id="filters" >
-            <div id="search">
+            <div class="text-center" id="search">
                 <input type="text" name="SearchTerms" value="@Model.SearchTerms" />
                 <input type="submit" value="Search">
             </div>
-
-
 
             <h4>Category</h4>
             @foreach (String category in BleakwindBuffet.Data.Menu.ItemTypes)
@@ -41,8 +39,6 @@
                 <input name="MAXPrice" value="@Model.MAXPrice" type="number" min="0.00" max="10.00" step=".01" placeholder="max" />
             </div>
 
-        
-
             <div class="text-center">
                 <h1 class="display-4">Welcome to the Bleakwind Buffet Website!</h1>
             </div>
@@ -56,57 +52,51 @@
 
 
 
+            <div class="flex-columns">
+                <div>
+                    <h2>Entrees</h2>
 
-            <div>
-                <h2>Entrees</h2>
-
-                @foreach (IOrderItem entree in Model.Entrees)
-                {
-                    @if (entree is BleakwindBuffet.Data.Entrees.Entree)
+                    @foreach (IOrderItem entree in Model.Entrees)
                     {
-                        <div>
-                            <h4>@entree.ToString()</h4>
-                            <p>Price: $@entree.Price</p>
-                            <p>Calories: @entree.Calories</p>
-                        </div>
+                        @if (entree is BleakwindBuffet.Data.Entrees.Entree)
+                        {
+                                <h4>@entree.ToString()</h4>
+                                <p>@entree.Description</p>
+                                <p>Price: $@entree.Price</p>
+                                <p>Calories: @entree.Calories</p>
+                        }
                     }
-                }
-            </div>
+                </div>
 
+                <div>
+                    <h2>Drinks</h2>
 
-
-            <div>
-                <h2>Drinks</h2>
-
-                @foreach (IOrderItem drink in Model.Drinks)
-                {
-                    @if (drink is BleakwindBuffet.Data.Drinks.Drink)
+                    @foreach (IOrderItem drink in Model.Drinks)
                     {
-                        <div>
-                            <h4>@drink.ToString()</h4>
-                            <p>Price: $@drink.Price</p>
-                            <p>Calories: @drink.Calories </p>
-                        </div>
+                        @if (drink is BleakwindBuffet.Data.Drinks.Drink)
+                        {
+                                <h4>@drink.ToString()</h4>
+                                <p>@drink.Description</p>
+                                <p>Price: $@drink.Price</p>
+                                <p>Calories: @drink.Calories </p>
+                        }
                     }
-                }
-            </div>
+                </div>
 
+                <div>
+                    <h2>Sides</h2>
 
-
-            <div>
-                <h2>Sides</h2>
-
-                @foreach (IOrderItem side in Model.Sides)
-                {
-                    @if (side is BleakwindBuffet.Data.Sides.Side)
+                    @foreach (IOrderItem side in Model.Sides)
                     {
-                        <div>
-                            <h4>@side.ToString()</h4>
-                            <p>Price: $@side.Price</p>
-                            <p>Calories: @side.Calories</p>
-                        </div>
+                        @if (side is BleakwindBuffet.Data.Sides.Side)
+                        {
+                                <h4>@side.ToString()</h4>
+                                <p>@side.Description</p>
+                                <p>Price: $@side.Price</p>
+                                <p>Calories: @side.Calories</p>
+                        }
                     }
-                }
+                </div>
             </div>
 
             <h7 class="text-center"> Any entree, side, and drink can be combined into a Combo with a $1 discount!</h7>

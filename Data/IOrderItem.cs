@@ -15,6 +15,11 @@ namespace BleakwindBuffet.Data
     public interface IOrderItem
     {
         /// <summary>
+        /// Gets the description of the item.
+        /// </summary>
+        string Description { get; }
+
+        /// <summary>
         /// Gets the type of item the iorderitem is
         /// </summary>
         string Type { get; }

@@ -16,6 +16,37 @@ namespace BleakwindBuffet.Data.Sides
     /// </summary>
     public abstract class Side : IOrderItem, INotifyPropertyChanged
     {
+
+        private string desc = ""; // Description backing variable
+
+        /// <summary>
+        /// Gets the description based on the type of item
+        /// </summary>
+        public virtual string Description
+        {
+            get
+            {
+                if (Name.Contains("Salad"))
+                {
+                    desc = "A seasonal fruit salad of mellons, berries, mango, grape, apple, and oranges.";
+                }
+                if (Name.Contains("Miraak"))
+                {
+                    desc = "Perfectly prepared hash brown pancakes.";
+                }
+                if (Name.Contains("Otar"))
+                {
+                    desc = "Cheesey Grits.";
+                }
+                if (Name.Contains("Waffle"))
+                {
+                    desc = "Crispy fried potato waffle fries.";
+
+                }
+                return desc;
+            }
+        }
+
         public virtual string Type => "Side";
 
         private Size size = Size.Small;

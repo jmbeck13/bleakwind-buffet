@@ -20,7 +20,7 @@ namespace BleakwindBuffet.Data
     /// </summary>
     public class Combo : IOrderItem, INotifyPropertyChanged
     {
-
+        public virtual string Description => "Combo";
         public virtual string Type => "Combo";
 
         public Combo(Entree o, Side s, Drink d)

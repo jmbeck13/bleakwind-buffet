@@ -4,7 +4,13 @@ using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Entrees;
+using BleakwindBuffet.Data;
+using BleakwindBuffet.Data.Enums;
+using BleakwindBuffet.Data.Drinks;
+using System.ComponentModel;
+using BleakwindBuffet.Data.Drinks;
 using System.Linq;
+using BleakwindBuffet.Data.Sides;
 
 namespace BleakwindBuffet.DataTests.UnitTests
 {
@@ -142,6 +148,53 @@ namespace BleakwindBuffet.DataTests.UnitTests
                                     item => Assert.Contains("Medium Warrior Water", item.ToString()),
                                     item => Assert.Contains("Large Warrior Water", item.ToString()));
             Assert.Equal(4, menu.Count());
+        }
+
+        [Fact]
+        public void DescriptionsAreCorrectForDrinks()
+        {
+            SailorSoda ss = new SailorSoda();
+            MarkarthMilk mm = new MarkarthMilk();
+            WarriorWater ww = new WarriorWater();
+            CandlehearthCoffee cc = new CandlehearthCoffee();
+            AretinoAppleJuice aj = new AretinoAppleJuice();
+            Assert.Equal("Fresh squeezed apple juice.", aj.Description);
+            Assert.Equal("An old-fashioned jerked soda, carbonated water and flavored syrup poured over a bed of crushed ice.", ss.Description);
+            Assert.Equal("Hormone-free organic 2% milk.", mm.Description);
+            Assert.Equal("It’s water. Just water.", ww.Description);
+            Assert.Equal("Fair trade, fresh ground dark roast coffee.", cc.Description);
+        }
+
+        [Fact]
+        public void DescriptionsAreCorrectForEntrees()
+        {
+            BriarheartBurger bb = new BriarheartBurger();
+            DoubleDraugr dd = new DoubleDraugr();
+            ThalmorTriple tt = new ThalmorTriple();
+            SmokehouseSkeleton ss = new SmokehouseSkeleton();
+            GardenOrcOmelette go = new GardenOrcOmelette();
+            PhillyPoacher pp = new PhillyPoacher();
+            ThugsTBone tb = new ThugsTBone();
+            Assert.Equal("Single patty burger on a brioche bun. Comes with ketchup, mustard, pickle, and cheese.", bb.Description);
+            Assert.Equal("Double patty burger on a brioche bun. Comes with ketchup, mustard, pickle, cheese, tomato, lettuce, and mayo.", dd.Description);
+            Assert.Equal("Think you are strong enough to take on the Thalmor? Inlcudes two 1/4lb patties with a 1/2lb patty inbetween with ketchup, mustard, pickle, cheese, tomato, lettuce, mayo, bacon, and an egg.", tt.Description);
+            Assert.Equal("Put some meat on those bones with a small stack of pancakes. Includes sausage links, eggs, and hash browns on the side. Topped with the syrup of your choice.", ss.Description);
+            Assert.Equal("Vegetarian. Two egg omelette packed with a mix of broccoli, mushrooms, and tomatoes. Topped with cheddar cheese.", go.Description);
+            Assert.Equal("Cheesesteak sandwich made from grilled sirloin, topped with onions on a fried roll.", pp.Description);
+            Assert.Equal("Juicy T-Bone, not much else to say.", tb.Description);
+        }
+
+        [Fact]
+        public void DescriptionsAreCorrectForSides()
+        {
+            VokunSalad vs = new VokunSalad();
+            FriedMiraak fm = new FriedMiraak();
+            MadOtarGrits mo = new MadOtarGrits();
+            DragonbornWaffleFries dw = new DragonbornWaffleFries();
+            Assert.Equal("A seasonal fruit salad of mellons, berries, mango, grape, apple, and oranges.", vs.Description);
+            Assert.Equal("Perfectly prepared hash brown pancakes.", fm.Description);
+            Assert.Equal("Cheesey Grits.", mo.Description);
+            Assert.Equal("Crispy fried potato waffle fries.", dw.Description);
         }
     }
 }

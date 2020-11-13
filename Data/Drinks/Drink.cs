@@ -17,6 +17,40 @@ namespace BleakwindBuffet.Data.Drinks
     public abstract class Drink : IOrderItem, INotifyPropertyChanged
     {
 
+        private string desc = ""; // Description backing variable
+
+        /// <summary>
+        /// Gets the description based on the type of item
+        /// </summary>
+        public virtual string Description
+        {
+            get
+            {
+                if (Name.Contains("Apple"))
+                {
+                    desc = "Fresh squeezed apple juice.";
+                }
+                if (Name.Contains("Sailor"))
+                {
+                    desc = "An old-fashioned jerked soda, carbonated water and flavored syrup poured over a bed of crushed ice.";
+                }
+                if (Name.Contains("Milk"))
+                {
+                    desc = "Hormone-free organic 2% milk.";
+                }
+                if (Name.Contains("Coffee"))
+                {
+                    desc = "Fair trade, fresh ground dark roast coffee.";
+
+                }
+                if (Name.Contains("Warrior"))
+                {
+                    desc = "It’s water. Just water.";
+                }
+                return desc;
+            }
+        }
+
         public virtual string Type => "Drink";
 
         protected Size size = Size.Small;
