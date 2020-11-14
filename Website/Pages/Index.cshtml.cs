@@ -83,9 +83,9 @@ namespace Website.Pages
             // Search menu item names for the SearchTerms
             if(SearchTerms != null)
             {
-               Entrees = Entrees.Where(entree => entree.ToString() != null && entree.ToString().Contains(SearchTerms, StringComparison.InvariantCultureIgnoreCase));
-               Drinks = Drinks.Where(drink => drink.ToString() != null && drink.ToString().Contains(SearchTerms, StringComparison.InvariantCultureIgnoreCase));
-               Sides = Sides.Where(side => side.ToString() != null && side.ToString().Contains(SearchTerms, StringComparison.InvariantCultureIgnoreCase));
+               Entrees = Entrees.Where(entree => entree.ToString() != null && entree.ToString().Contains(SearchTerms, StringComparison.InvariantCultureIgnoreCase) || entree.Description.Contains(SearchTerms, StringComparison.InvariantCultureIgnoreCase));
+               Drinks = Drinks.Where(drink => drink.ToString() != null && drink.ToString().Contains(SearchTerms, StringComparison.InvariantCultureIgnoreCase) || drink.Description.Contains(SearchTerms, StringComparison.InvariantCultureIgnoreCase));
+               Sides = Sides.Where(side => side.ToString() != null && side.ToString().Contains(SearchTerms, StringComparison.InvariantCultureIgnoreCase) || side.Description.Contains(SearchTerms, StringComparison.InvariantCultureIgnoreCase));
             }
 
             // Filter by ItemType
